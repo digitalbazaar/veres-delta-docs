@@ -1,3 +1,9 @@
 [submodule "bedrock-ledger-storage-mongodb"]
 	path = bedrock-ledger-storage-mongodb
 	url = https://github.com/digitalbazaar/bedrock-ledger-storage-mongodb
+[submodule "bedrock-ledger-agent"]
+	path = bedrock-ledger-agent
+	url = https://github.com/digitalbazaar/bedrock-ledger-agent
+[submodule "bedrock-ledger-node"]
+	path = bedrock-ledger-node
+	url = https://github.com/digitalbazaar/bedrock-ledger-node
