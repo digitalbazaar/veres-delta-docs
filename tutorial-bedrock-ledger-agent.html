@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Tutorial: bedrock-ledger-agent - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="LedgerNode.html">LedgerNode</a></li><li><a href="LedgerNodeBlocks.html">LedgerNodeBlocks</a><ul class='methods'><li data-type='method'><a href="LedgerNodeBlocks.html#get">get</a></li><li data-type='method'><a href="LedgerNodeBlocks.html#getGenesis">getGenesis</a></li><li data-type='method'><a href="LedgerNodeBlocks.html#getLatest">getLatest</a></li></ul></li><li><a href="LedgerNodeConfig.html">LedgerNodeConfig</a><ul class='methods'><li data-type='method'><a href="LedgerNodeConfig.html#change">change</a></li><li data-type='method'><a href="LedgerNodeConfig.html#get">get</a></li><li data-type='method'><a href="LedgerNodeConfig.html#validate">validate</a></li></ul></li><li><a href="LedgerNodeEvents.html">LedgerNodeEvents</a><ul class='methods'><li data-type='method'><a href="LedgerNodeEvents.html#get">get</a></li></ul></li><li><a href="LedgerNodeMeta.html">LedgerNodeMeta</a><ul class='methods'><li data-type='method'><a href="LedgerNodeMeta.html#get">get</a></li></ul></li><li><a href="LedgerNodeOperations.html">LedgerNodeOperations</a><ul class='methods'><li data-type='method'><a href="LedgerNodeOperations.html#add">add</a></li><li data-type='method'><a href="LedgerNodeOperations.html#validate">validate</a></li></ul></li><li><a href="LedgerNodeRecords.html">LedgerNodeRecords</a><ul class='methods'><li data-type='method'><a href="LedgerNodeRecords.html#get">get</a></li></ul></li><li><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html">LedgerBlockStorage</a><ul class='methods'><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#add">add</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#get">get</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#getAll">getAll</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#getByHeight">getByHeight</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#getGenesis">getGenesis</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#getLatest">getLatest</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#getLatestSummary">getLatestSummary</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#getSummary">getSummary</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#getSummaryByHeight">getSummaryByHeight</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#remove">remove</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#update">update</a></li></ul></li><li><a href="module-bedrock-ledger-storage-mongodb.LedgerEventStorage.html">LedgerEventStorage</a><ul class='methods'><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerEventStorage.html#add">add</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerEventStorage.html#difference">difference</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerEventStorage.html#exists">exists</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerEventStorage.html#get">get</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerEventStorage.html#getActiveConfig">getActiveConfig</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerEventStorage.html#getCount">getCount</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerEventStorage.html#getLatestConfig">getLatestConfig</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerEventStorage.html#remove">remove</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerEventStorage.html#update">update</a></li></ul></li><li><a href="module-bedrock-ledger-storage-mongodb.LedgerOperationStorage.html">LedgerOperationStorage</a><ul class='methods'><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerOperationStorage.html#exists">exists</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-bedrock-ledger-storage-mongodb.html">bedrock-ledger-storage-mongodb</a></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-bedrock-ledger-agent.html">bedrock-ledger-agent</a></li><li><a href="tutorial-bedrock-ledger-node.html">bedrock-ledger-node</a></li><li><a href="tutorial-bedrock-ledger-storage-mongodb.html">Bedrock Ledger Storage MongoDB</a></li></ul><h3>Global</h3><ul><li><a href="global.html#_addNewLedgerAgent">_addNewLedgerAgent</a></li><li><a href="global.html#_addNewLedgerNode">_addNewLedgerNode</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Tutorial: bedrock-ledger-agent</h1>
+    
+
+    <section>
+
+<header>
+    
+
+    <h2>bedrock-ledger-agent</h2>
+</header>
+
+<article>
+    <h1>Bedrock Ledger Agent</h1><p><a href="https://ci.digitalbazaar.com/job/bedrock-ledger-agent"><img src="https://ci.digitalbazaar.com/buildStatus/icon?job=bedrock-ledger-agent" alt="Build Status"></a></p>
+<p>A <a href="https://github.com/digitalbazaar/bedrock">bedrock</a> module for the creation and management of
+<a href="https://w3c.github.io/web-ledger/">Web Ledger Agents</a>.
+The Web Ledger ecosystem consists of Ledger Agents,
+Ledger Nodes, Ledgers, Blocks, and Events.</p>
+<p><img src="https://w3c.github.io/web-ledger/diagrams/ecosystem.svg" alt="An image of the Web Ledger ecosystem"></p>
+<h2>The HTTP API</h2><ul>
+<li>GET /ledger-agents<ul>
+<li>Get a list of all ledger agents</li>
+</ul>
+</li>
+<li>POST /ledger-agents?owner={OWNER_ID}<ul>
+<li>Create a new ledger agent</li>
+</ul>
+</li>
+<li>GET /ledger-agent/{AGENT_ID}<ul>
+<li>Get status information on a particular ledger agent</li>
+</ul>
+</li>
+<li>POST /ledger-agent/{AGENT_ID}/config<ul>
+<li>Add a new configuration</li>
+</ul>
+</li>
+<li>POST /ledger-agent/{AGENT_ID}/operations<ul>
+<li>Add a new operation</li>
+</ul>
+</li>
+<li>GET /ledger-agent/{AGENT_ID}/events?id=EVENT_ID<ul>
+<li>Get an existing event</li>
+</ul>
+</li>
+<li>GET /ledger-agent/{AGENT_ID}/blocks?id=BLOCK_ID<ul>
+<li>Get an existing block</li>
+</ul>
+</li>
+<li>GET /ledger-agent/{AGENT_ID}/query<ul>
+<li>Query the current state of an object in the system</li>
+</ul>
+</li>
+</ul>
+<h2>The Ledger Agent API</h2><ul>
+<li>Ledger Agent API<ul>
+<li>api.add(actor, ledgerNodeId, options, (err, ledgerAgent))</li>
+<li>api.get(actor, agentId, options, (err, ledgerAgent))</li>
+<li>api.remove(actor, agentId, options, callback(err))</li>
+<li>api.getAgentIterator(actor, options, callback(err, iterator))</li>
+</ul>
+</li>
+</ul>
+<h2>Quick Examples</h2><pre class="prettyprint source"><code>npm install bedrock-ledger-agent</code></pre><pre class="prettyprint source lang-js"><code>const agent = require('bedrock-ledger-agent');
+const actor = 'admin';
+const agentId = 'https://example.com/ledger-agents/eb8c22dc';
+const options = {};
+
+agent.get(actor, agentId, options, (err, ledgerAgent) => {
+  ledgerAgent.node.events.add( /* new ledger event details go here */);
+    /* ... do other operations on the ledger */
+  });
+});</code></pre><h2>Configuration</h2><p>For documentation on configuration, see <a href="./lib/config.js">config.js</a>.</p>
+<h2>Ledger Agent API</h2><h3>Add a Ledger Agent</h3><p>Create a new ledger agent given a set of options. If a ledgerNodeId is
+provided, a new ledger agent will be created to connect to an
+existing ledger. If a <code>ledgerConfiguration</code> is specified in the options,
+a new ledger and corresponding ledger node will be created, ignoring
+any specified ledgerNodeId.</p>
+<ul>
+<li>actor - the actor performing the action.</li>
+<li>ledgerNodeId - the ID for the ledger node to connect to.</li>
+<li>options - a set of options used when creating the agent.<ul>
+<li>ledgerConfiguration - the configuration for the ledger.</li>
+<li>genesis - if true, create an entirely new genesis ledger (default: false).</li>
+<li>storage - the storage subsystem for the ledger (default: 'mongodb').</li>
+<li>public - if false, only the actor should be able to access the
+  created ledger, if true, anyone can access (default: false).</li>
+</ul>
+</li>
+<li>callback(err, ledger) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise</li>
+<li>ledgerAgent - the ledger agent associated with the agent.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const ledgerConfiguration = {
+  '@context': 'https://w3id.org/webledger/v1',
+  type: 'WebLedgerConfiguration',
+  ledger: 'did:v1:eb8c22dc-bde6-4315-92e2-59bd3f3c7d59',
+  consensusMethod: 'UnilateralConsensus2017'
+  ledgerConfigurationValidator: [{
+    type: 'SignatureValidator2017',
+    validatorFilter: [{
+      type: 'ValidatorFilterByType',
+      validatorFilterByType: ['WebLedgerConfiguration']
+    }],
+    approvedSigner: [
+      'did:v1:53ebca61-5687-4558-b90a-03167e4c2838/keys/144'
+    ],
+    minimumSignaturesRequired: 1
+  }],
+  operationValidator: [{
+    type: 'SignatureValidator2017',
+    validatorFilter: [{
+      type: 'ValidatorFilterByType',
+      validatorFilterByType: ['CreateWebLedgerRecord']
+    }],
+    approvedSigner: [
+      'did:v1:53ebca61-5687-4558-b90a-03167e4c2838/keys/144'
+    ],
+    minimumSignaturesRequired: 1
+  }],
+  proof: {
+    type: 'RsaSignature2018',
+    created: '2017-10-24T05:33:31Z',
+    creator: 'did:v1:53ebca61-5687-4558-b90a-03167e4c2838/keys/144',
+    domain: 'example.com',
+    jws: 'eyiOiJJ0eXAK...EjXkgFWFO'
+  }
+};
+const options = {
+  ledgerConfiguration,
+  genesis: true
+};
+
+agent.add(actor, null, options, (err, ledgerAgent) => {
+  if(err) {
+    throw new Error('Failed to create ledger agent:', err);
+  }
+
+  console.log('Ledger agent created:', ledgerAgent.id);
+});</code></pre><h3>Get a Specific Ledger Agent</h3><p>Gets a ledger agent given an agentId and a set of options.</p>
+<ul>
+<li>actor - the actor performing the action.</li>
+<li>agentId - the URI of the agent.</li>
+<li>options - a set of options used when creating the agent.</li>
+<li>callback(err, ledgerAgent) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise</li>
+<li>ledgerAgent - A ledger agent that can be used to
+instruct the ledger node to perform certain actions.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const actor = 'admin';
+const agentId = 'https://example.com/ledger-agents/eb8c22dc';
+const options = {};
+
+agent.get(actor, agentId, options, (err, ledgerAgent) => {
+  if(err) {
+    throw new Error('Failed to get ledger agent:', err);
+  }
+
+  console.log('Ledger agent retrieved', ledgerAgent.id);
+});</code></pre><h3>Remove a Ledger Agent</h3><p>Remove an existing ledger agent given an agentId and a set of options.</p>
+<ul>
+<li>actor - the actor performing the action.</li>
+<li>agentId - the URI of the agent.</li>
+<li>options - a set of options used when removing the agent.</li>
+<li>callback(err) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const agentId = 'https://example.com/ledger-agents/eb8c22dc';
+const options = {};
+
+agent.remove(actor, agentId, options, err => {
+  if(err) {
+    throw new Error('Failed to remove ledger agent:', err);
+  }
+
+  console.log('Ledger agent removed.');
+});</code></pre><h3>Iterate Through All Ledger Agents</h3><p>Gets an iterator that will iterate over all ledger agents in
+the system. The iterator will return a ledger agent which
+can be used to operate on the corresponding ledger node.</p>
+<ul>
+<li>actor - the actor performing the action.</li>
+<li>options - a set of options to use when retrieving the list.</li>
+<li>callback(err, iterator) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise</li>
+<li>iterator - An iterator that returns a list of ledger agents.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const actor = 'admin';
+const options = {};
+
+bedrockagent.getagentIterator(actor, options, (err, iterator) => {
+  if(err) {
+    throw new Error('Failed to fetch iterator for ledger agents:', err);
+  }
+
+  for(const ledgerAgent of iterator) {
+    console.log('Ledger agent:',  ledgerAgent.id);
+  }
+});</code></pre>
+</article>
+
+</section>
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Aug 16 2018 15:46:01 GMT-0700 (PDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

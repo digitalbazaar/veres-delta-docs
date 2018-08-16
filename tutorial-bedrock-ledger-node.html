@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Tutorial: bedrock-ledger-node - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="LedgerNode.html">LedgerNode</a></li><li><a href="LedgerNodeBlocks.html">LedgerNodeBlocks</a><ul class='methods'><li data-type='method'><a href="LedgerNodeBlocks.html#get">get</a></li><li data-type='method'><a href="LedgerNodeBlocks.html#getGenesis">getGenesis</a></li><li data-type='method'><a href="LedgerNodeBlocks.html#getLatest">getLatest</a></li></ul></li><li><a href="LedgerNodeConfig.html">LedgerNodeConfig</a><ul class='methods'><li data-type='method'><a href="LedgerNodeConfig.html#change">change</a></li><li data-type='method'><a href="LedgerNodeConfig.html#get">get</a></li><li data-type='method'><a href="LedgerNodeConfig.html#validate">validate</a></li></ul></li><li><a href="LedgerNodeEvents.html">LedgerNodeEvents</a><ul class='methods'><li data-type='method'><a href="LedgerNodeEvents.html#get">get</a></li></ul></li><li><a href="LedgerNodeMeta.html">LedgerNodeMeta</a><ul class='methods'><li data-type='method'><a href="LedgerNodeMeta.html#get">get</a></li></ul></li><li><a href="LedgerNodeOperations.html">LedgerNodeOperations</a><ul class='methods'><li data-type='method'><a href="LedgerNodeOperations.html#add">add</a></li><li data-type='method'><a href="LedgerNodeOperations.html#validate">validate</a></li></ul></li><li><a href="LedgerNodeRecords.html">LedgerNodeRecords</a><ul class='methods'><li data-type='method'><a href="LedgerNodeRecords.html#get">get</a></li></ul></li><li><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html">LedgerBlockStorage</a><ul class='methods'><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#add">add</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#get">get</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#getAll">getAll</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#getByHeight">getByHeight</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#getGenesis">getGenesis</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#getLatest">getLatest</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#getLatestSummary">getLatestSummary</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#getSummary">getSummary</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#getSummaryByHeight">getSummaryByHeight</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#remove">remove</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerBlockStorage.html#update">update</a></li></ul></li><li><a href="module-bedrock-ledger-storage-mongodb.LedgerEventStorage.html">LedgerEventStorage</a><ul class='methods'><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerEventStorage.html#add">add</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerEventStorage.html#difference">difference</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerEventStorage.html#exists">exists</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerEventStorage.html#get">get</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerEventStorage.html#getActiveConfig">getActiveConfig</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerEventStorage.html#getCount">getCount</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerEventStorage.html#getLatestConfig">getLatestConfig</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerEventStorage.html#remove">remove</a></li><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerEventStorage.html#update">update</a></li></ul></li><li><a href="module-bedrock-ledger-storage-mongodb.LedgerOperationStorage.html">LedgerOperationStorage</a><ul class='methods'><li data-type='method'><a href="module-bedrock-ledger-storage-mongodb.LedgerOperationStorage.html#exists">exists</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-bedrock-ledger-storage-mongodb.html">bedrock-ledger-storage-mongodb</a></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-bedrock-ledger-agent.html">bedrock-ledger-agent</a></li><li><a href="tutorial-bedrock-ledger-node.html">bedrock-ledger-node</a></li><li><a href="tutorial-bedrock-ledger-storage-mongodb.html">Bedrock Ledger Storage MongoDB</a></li></ul><h3>Global</h3><ul><li><a href="global.html#_addNewLedgerAgent">_addNewLedgerAgent</a></li><li><a href="global.html#_addNewLedgerNode">_addNewLedgerNode</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Tutorial: bedrock-ledger-node</h1>
+    
+
+    <section>
+
+<header>
+    
+
+    <h2>bedrock-ledger-node</h2>
+</header>
+
+<article>
+    <h1>Bedrock Ledger Node</h1><p><a href="https://ci.digitalbazaar.com/job/bedrock-ledger-node"><img src="https://ci.digitalbazaar.com/buildStatus/icon?job=bedrock-ledger-node" alt="Build Status"></a></p>
+<p>A <a href="https://github.com/digitalbazaar/bedrock">bedrock</a> module for the creation and management of
+<a href="https://w3c.github.io/web-ledger/">Web Ledgers</a>.
+The Web Ledger ecosystem consists of Ledger Agents,
+Ledger Nodes, Ledgers, Blocks, and Events. This API
+enables the management of ledger nodes, ledgers,
+blocks, and events.</p>
+<p><img src="https://w3c.github.io/web-ledger/diagrams/ecosystem.svg" alt="An image of the Web Ledger ecosystem"></p>
+<h2>The Ledger Node API</h2><ul>
+<li>Ledger Node API<ul>
+<li>api.add(actor, options, (err, ledgerNode))</li>
+<li>api.get(actor, ledgerId, options, (err, ledgerNode))</li>
+<li>api.remove(actor, ledgerId, options, callback(err))</li>
+<li>api.getNodeIterator(actor, options, callback(err, iterator))</li>
+</ul>
+</li>
+<li>Ledger Node Metadata API<ul>
+<li>ledgerNode.meta.get(options, (err, ledgerMeta))</li>
+</ul>
+</li>
+<li>Ledger Node Blocks API<ul>
+<li>ledgerNode.blocks.get(blockId, options, callback(err, block))</li>
+</ul>
+</li>
+<li>Ledger Node Config API<ul>
+<li>ledgerNode.config.change(ledgerConfiguration, options, (err))</li>
+</ul>
+</li>
+<li>Ledger Node Events API<ul>
+<li>ledgerNode.events.get(eventId, options, (err, event))</li>
+</ul>
+</li>
+<li>Ledger Node Operations API<ul>
+<li>ledgerNode.operations.add(operation, options, (err))</li>
+</ul>
+</li>
+<li>Ledger State Machine API<ul>
+<li>ledgerNode.stateMachine.get(objectId, options, (err, object))</li>
+</ul>
+</li>
+<li>Ledger Node Plugin API<ul>
+<li>api.use(options, mongodbStorageApi)</li>
+</ul>
+</li>
+</ul>
+<h2>Quick Examples</h2><pre class="prettyprint source"><code>npm install bedrock-ledger-node bedrock-ledger-storage-mongodb bedrock-ledger-validator-signature</code></pre><pre class="prettyprint source lang-js"><code>const brLedgerNode = require('bedrock-ledger-node');
+require('bedrock-ledger-storage-mongodb');
+require('bedrock-ledger-validator-signature');
+
+const actor = 'admin';
+const ledgerId = 'did:v1:eb8c22dc-bde6-4315-92e2-59bd3f3c7d59';
+
+brLedgerNode.get(actor, ledgerId, options, (err, ledgerNode) => {
+  ledgerNode.operations.add( /* new ledger operation details go here */);
+    /* ... do other operations on the ledger */
+  });
+});</code></pre><h2>Configuration</h2><p>For documentation on configuration, see <a href="./lib/config.js">config.js</a>.</p>
+<h2>Ledger Node API</h2><h3>Create a Ledger Node</h3><p>Creates a new ledger node. The given options will determine if the ledger
+node will become the first node for a new ledger or if it will mirror
+and existing ledger.</p>
+<p>If <strong>options.ledgerConfiguration</strong> is given, then a new ledger will be created
+and the ledger node will be its first member.</p>
+<p>If a <strong>options.genesisBlock</strong> is given, then an existing ledger will be
+mirrored by the new ledger node.</p>
+<ul>
+<li>actor - the actor performing the action.</li>
+<li>options - a set of options used when creating the ledger.<ul>
+<li>configEvent - the configuration event for a brand new ledger.</li>
+<li>genesisBlock - the genesis block for an existing ledger.</li>
+<li>peerLedgerAgents - a list of Web Ledger Agent peer URLs to associate</li>
+<li>with the ledger node; these may be optionally used by a consensus</li>
+<li>method.</li>
+<li>storage - the storage subsystem for the ledger (default: 'mongodb').</li>
+<li>owner - the owner of the ledger node (default: <strong>undefined</strong>, anyone
+  can access the node).</li>
+</ul>
+</li>
+<li>callback(err, ledger) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise</li>
+<li>ledgerNode - the ledger node associated with the ledger.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const ledgerConfiguration = {
+  '@context': 'https://w3id.org/webledger/v1',
+  type: 'WebLedgerConfiguration',
+  ledger: 'did:v1:eb8c22dc-bde6-4315-92e2-59bd3f3c7d59',
+  consensusMethod: 'UnilateralConsensus2017',
+  ledgerConfigurationValidator: [{
+    type: 'SignatureValidator2017',
+    validatorFilter: [{
+      type: 'ValidatorFilterByType',
+      validatorFilterByType: ['WebLedgerConfiguration']
+    }],
+    approvedSigner: [
+      'did:v1:53ebca61-5687-4558-b90a-03167e4c2838/keys/144'
+    ],
+    minimumSignaturesRequired: 1
+  }],
+  operationValidator: [{
+    type: 'SignatureValidator2017',
+    validatorFilter: [{
+      type: 'ValidatorFilterByType',
+      validatorFilterByType: ['CreateWebLedgerRecord']
+    }],
+    approvedSigner: [
+      'did:v1:53ebca61-5687-4558-b90a-03167e4c2838/keys/144'
+    ],
+    minimumSignaturesRequired: 1
+  }],
+  proof: {
+    type: 'RsaSignature2018',
+    created: '2017-10-24T05:33:31Z',
+    creator: 'did:v1:53ebca61-5687-4558-b90a-03167e4c2838/keys/144',
+    domain: 'example.com',
+    jws: 'eyiOiJJ0eXAK...EjXkgFWFO'
+  }
+};
+const options = {
+  ledgerConfiguration,
+  owner: 'https://example.com/i/123'
+};
+
+brLedgerNode.add(actor, options, (err, ledgerNode) => {
+  if(err) {
+    throw new Error('Failed to create ledger node:', err);
+  }
+
+  console.log('Ledger node and new ledger created:', ledgerNode.ledger);
+});</code></pre><h3>Get a Specific Ledger Node</h3><p>Gets a ledger node given a ledgerId and a set of options.</p>
+<ul>
+<li>actor - the actor performing the action.</li>
+<li>ledgerId - the URI of the ledger.</li>
+<li>options - a set of options used when creating the ledger.<ul>
+<li>storage - the storage subsystem for the ledger (default 'mongodb').</li>
+</ul>
+</li>
+<li>callback(err, ledgerNode) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise</li>
+<li>ledgerNode - A ledger node that can be used to
+perform actions on the ledger.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const actor = 'admin';
+const ledgerId = 'did:v1:eb8c22dc-bde6-4315-92e2-59bd3f3c7d59';
+const options = {};
+
+ledger.get(actor,  ledgerId, options, (err, ledgerNode) => {
+  if(err) {
+    throw new Error('Failed to create ledger:', err);
+  }
+
+  console.log('Ledger created', ledgerNode.ledgerId);
+});</code></pre><h3>Delete a Ledger</h3><p>Delete an existing ledger given a ledgerId and a set of options.</p>
+<ul>
+<li>actor - the actor performing the action.</li>
+<li>ledgerId - the URI of the ledger.</li>
+<li>options - a set of options used when deleting the ledger.</li>
+<li>callback(err) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const ledgerId = 'did:v1:eb8c22dc-bde6-4315-92e2-59bd3f3c7d59';
+const options = {};
+
+ledger.remove(actor, ledgerId, options, err => {
+  if(err) {
+    throw new Error('Failed to delete ledger:', err);
+  }
+
+  console.log('Ledger deleted.');
+});</code></pre><h3>Iterate Through All Ledgers</h3><p>Gets an iterator that will iterate over all ledgers in the system.
+The iterator will return a ledgerNodeMeta which contains an
+id that can be passed to the api.get() call to fetch an
+instance of the ledgerNode storage for the associated ledger.</p>
+<ul>
+<li>actor - the actor performing the action.</li>
+<li>options - a set of options to use when retrieving the list.</li>
+<li>callback(err, iterator) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise</li>
+<li>iterator - An iterator that returns ledgerNodeMeta objects.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const actor = 'admin';
+const options = {};
+
+bedrockLedger.getNodeIterator(actor, options, (err, iterator) => {
+  if(err) {
+    throw new Error('Failed to fetch iterator for ledger nodes:', err);
+  }
+
+  for(let ledgerNodeMeta of iterator) {
+    console.log('Ledger node:',  ledgerNodeMeta);
+  }
+});</code></pre><h2>Metadata API</h2><h3>Get Ledger Metadata</h3><p>Gets metadata associated with the ledger, such as most recent
+configuration block and latest consensus block,
+given a set of options.</p>
+<ul>
+<li>options - a set of options used when retrieving the ledger metadata.</li>
+<li>callback(err) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+<li>ledgerMeta - metadata about the ledger.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>ledgerNode.meta.get(options, (err, ledgerMeta) => {
+  if(err) {
+    throw new Error('Ledger metadata retrieval failed:', err);
+  }
+
+  console.log('Ledger metadata:', ledgerMeta);
+});</code></pre><h2>Blocks API</h2><h3>Get a Ledger Block</h3><p>Gets a block from the ledger given a blockID and a set of options.</p>
+<ul>
+<li>blockId - the URI of the block to fetch.</li>
+<li>options - a set of options used when retrieving the block.</li>
+<li>callback(err) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const blockId = 'did:v1:eb8c22dc-bde6-4315-92e2-59bd3f3c7d59/blocks/1';
+const options = {};
+
+ledgerNode.blocks.get(blockId, options, (err, block) => {
+  if(err) {
+    throw new Error('Block retrieval failed:', err);
+  }
+
+  console.log('Retrieved block:', blocks);
+});</code></pre><h3>Gets the genesis block</h3><p>Gets the genesis block from a ledger given a set of options.</p>
+<ul>
+<li>options - a set of options used when retrieving the block.</li>
+<li>callback(err) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+<li>result - the genesis block from the ledger.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const options = {};
+
+ledgerNode.blocks.getGenesis(options, (err, result) => {
+  if(err) {
+    throw new Error('Block retrieval failed:', err);
+  }
+
+  console.log('Retrieved genesis block:',
+    result.genesisBlock.block, result.genesisBlock.meta);
+});</code></pre><h3>Gets the latest blocks</h3><p>Gets the latest blocks from a ledger given a set of options.</p>
+<ul>
+<li>options - a set of options used when retrieving the block.</li>
+<li>callback(err) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+<li>result - the latest blocks from the ledger.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const options = {};
+
+ledgerNode.blocks.getLatest(options, (err, result) => {
+  if(err) {
+    throw new Error('Block retrieval failed:', err);
+  }
+
+  console.log('Retrieved latest block:',
+    result.latest.block, result.latest.meta);
+});</code></pre><h2>Config API</h2><h3>Change a Ledger's configuration</h3><p>Schedules a change to the ledger's configuration. The particular consensus
+mechanism for the ledger will determine what event to place the new
+<code>ledgerConfiguration</code> in and when that event achieves consensus. Different
+consensus mechanisms will behave differently. Once the event containing the
+operation achieves consensus, the new configuration will be applied via the
+ledger's state machine if it is considered valid at that time.</p>
+<ul>
+<li>ledgerConfiguration - the new ledger configuration to use.</li>
+<li>options - a set of options used when adding the ledger configuration.</li>
+<li>callback(err) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const ledgerConfiguration = {
+  '@context': 'https://w3id.org/webledger/v1',
+  type: 'WebLedgerConfiguration',
+  ledger: 'did:v1:eb8c22dc-bde6-4315-92e2-59bd3f3c7d59',
+  consensusMethod: 'UnilateralConsensus2017',
+  ledgerConfigurationValidator: [{
+    type: 'SignatureValidator2017',
+    validatorFilter: [{
+      type: 'ValidatorFilterByType',
+      validatorFilterByType: ['WebLedgerConfiguration']
+    }],
+    approvedSigner: [
+      'did:v1:53ebca61-5687-4558-b90a-03167e4c2838/keys/144'
+    ],
+    minimumSignaturesRequired: 1
+  }],
+  operationValidator: [{
+    type: 'SignatureValidator2017',
+    validatorFilter: [{
+      type: 'ValidatorFilterByType',
+      validatorFilterByType: ['CreateWebLedgerRecord']
+    }],
+    approvedSigner: [
+      'did:v1:53ebca61-5687-4558-b90a-03167e4c2838/keys/144'
+    ],
+    minimumSignaturesRequired: 1
+  }],
+  proof: {
+    type: 'RsaSignature2018',
+    created: '2017-10-24T05:33:31Z',
+    creator: 'did:v1:53ebca61-5687-4558-b90a-03167e4c2838/keys/144',
+    domain: 'example.com',
+    jws: 'eyiOiJJ0eXAK...EjXkgFWFO'
+  }
+};
+const options = {};
+
+ledgerNode.config.change(ledgerConfiguration, options, err => {
+  if(err) {
+    throw new Error('Failed to change the configuration:', err);
+  }
+
+  console.log('Ledger configuration change scheduled.');
+});</code></pre><h2>Operations API</h2><h3>Add a Ledger Operation</h3><p>Adds an operation to mutate the state of the ledger. The particular consensus
+mechanism for the ledger will determine what event to place the operation in
+and when that event achieves consensus. Different consensus mechanisms will
+behave differently. Once the event containing the operation achieves consensus,
+the operation will be applied via the ledger's state machine if it is
+considered valid at that time.</p>
+<ul>
+<li>operation - the operation to perform.</li>
+<li>options - a set of options used when adding the operation.</li>
+<li>callback(err) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const operation = {
+  '@context': 'https://w3id.org/webledger/v1',
+  type: 'CreateWebLedgerRecord',
+  record: {
+    '@context': 'https://schema.org/',
+    id: 'https://example.com/events/123456',
+    type: 'Concert',
+    name: 'Big Band Concert in New York City',
+    startDate: '2017-07-14T21:30',
+    location: 'https://example.org/the-venue',
+    offers: {
+      type: 'Offer',
+      price: '13.00',
+      priceCurrency: 'USD',
+      url: 'https://www.ticketfly.com/purchase/309433'
+    }
+  },
+  proof: {
+    type: 'RsaSignature2018',
+    created: '2017-05-10T19:47:15Z',
+    creator: 'https://www.ticketfly.com/keys/789',
+    jws: 'JoS27wqa...BFMgXIMw=='
+  }
+};
+const options = {};
+
+ledgerNode.operations.add(operation, options, err => {
+  if(err) {
+    throw new Error('Failed to add the operation:', err);
+  }
+
+  console.log('Operation addition successful.');
+});</code></pre><h2>Events API</h2><h3>Get a Ledger Event</h3><p>Gets an event associated with the ledger given an eventID
+and a set of options.</p>
+<ul>
+<li>eventId - the event to fetch from the ledger.</li>
+<li>options - a set of options used when retrieving the event.</li>
+<li>callback(err) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+<li>event - the event that was retrieved from the database.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const eventId = 'ni:///sha-256;cGBSKHn2cBJ563oSt3SAf4OxZXXfwtSxj1xFO5LtkGkW';
+
+ledgerNode.events.get(eventId, options, (err, event) => {
+  if(err) {
+    throw new Error('Event retrieval failed:', err);
+  }
+
+  console.log('Event retrieval successful:', events);
+});</code></pre><h2>State Machine API</h2><h3>Get an Object</h3><p>Gets an object associated with the state machine of
+ledger given an objectId and a set of options.</p>
+<ul>
+<li>objectId - the object to fetch from the state machine.</li>
+<li>options - a set of options used when retrieving the object.</li>
+<li>callback(err) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+<li>object - the object that was retrieved from the database.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const objectId = 'https://example.com/objects/1234';
+
+ledgerNode.stateMachne.get(objectId, options, (err, object) => {
+  if(err) {
+    throw new Error('Object retrieval failed:', err);
+  }
+
+  console.log('Object retrieval successful:', object);
+});</code></pre><h2>Ledger Plugin Registration API</h2><p>Registers or retrieves a ledger plugin.</p>
+<p>A plugin can be registered to extend the capabilities of the ledger
+subsystem by adding new storage, consensus, and authorization mechanisms.</p>
+<ul>
+<li>capabilityName (required) - the name of the capability</li>
+<li>[capabilityValue | callback] - either the value of the capability or
+a callback function to receive the value when used as an asynchronous
+getter. A capabilityValue must be an object with these properties:<ul>
+<li>type - type type of plugin (e.g. 'storage', 'authorization', 'consensus')</li>
+<li>api - the javascript API for the plugin</li>
+</ul>
+</li>
+</ul>
+<p>Returns the capabilityValue when used as a synchronous getter (no callback
+function is passed as the second parameter).</p>
+<pre class="prettyprint source lang-javascript"><code>// this code would be executed in a plugin
+const brLedgerNode = require('bedrock-ledger-node');
+
+// register a plugin
+brLedgerNode.use('mongodb', {
+  type: 'storage',
+  api: mongodbStorageApi
+});
+
+// get a plugin synchronously
+const plugin = brLedgerNode.use('mongodb');
+// plugin.type
+// plugin.api</code></pre>
+</article>
+
+</section>
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Aug 16 2018 15:46:01 GMT-0700 (PDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
