@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Tutorial: Bedrock Ledger Storage MongoDB - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="module.exports.html">exports</a><ul class='methods'><li data-type='method'><a href="module.exports.html#add">add</a></li><li data-type='method'><a href="module.exports.html#add">add</a></li><li data-type='method'><a href="module.exports.html#difference">difference</a></li><li data-type='method'><a href="module.exports.html#exists">exists</a></li><li data-type='method'><a href="module.exports.html#exists">exists</a></li><li data-type='method'><a href="module.exports.html#get">get</a></li><li data-type='method'><a href="module.exports.html#get">get</a></li><li data-type='method'><a href="module.exports.html#getActiveConfig">getActiveConfig</a></li><li data-type='method'><a href="module.exports.html#getAll">getAll</a></li><li data-type='method'><a href="module.exports.html#getByHeight">getByHeight</a></li><li data-type='method'><a href="module.exports.html#getCount">getCount</a></li><li data-type='method'><a href="module.exports.html#getGenesis">getGenesis</a></li><li data-type='method'><a href="module.exports.html#getLatest">getLatest</a></li><li data-type='method'><a href="module.exports.html#getLatestConfig">getLatestConfig</a></li><li data-type='method'><a href="module.exports.html#getLatestSummary">getLatestSummary</a></li><li data-type='method'><a href="module.exports.html#getSummary">getSummary</a></li><li data-type='method'><a href="module.exports.html#getSummaryByHeight">getSummaryByHeight</a></li><li data-type='method'><a href="module.exports.html#remove">remove</a></li><li data-type='method'><a href="module.exports.html#remove">remove</a></li><li data-type='method'><a href="module.exports.html#update">update</a></li><li data-type='method'><a href="module.exports.html#update">update</a></li></ul></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-bedrock-ledger-storage-mongodb.html">Bedrock Ledger Storage MongoDB</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Tutorial: Bedrock Ledger Storage MongoDB</h1>
+    
+
+    <section>
+
+<header>
+    
+
+    <h2>Bedrock Ledger Storage MongoDB</h2>
+</header>
+
+<article>
+    <h1>bedrock-ledger-storage-mongodb</h1><p><a href="https://ci.digitalbazaar.com/job/bedrock-ledger-storage-mongodb"><img src="https://ci.digitalbazaar.com/buildStatus/icon?job=bedrock-ledger-storage-mongodb" alt="Build Status"></a></p>
+<p>A MongoDB ledger storage subsystem for bedrock-ledger that enables the
+storage and retrieval of ledgers, blocks, and events. The relationship
+of these objects are shown below:</p>
+<p><img alt="Ledgers contain blocks, blocks contain events"
+  src="https://w3c.github.io/web-ledger/diagrams/blocks.svg"
+  width=450px;/></p>
+<p>This API exposes the following methods:</p>
+<ul>
+<li>Ledger Storage API<ul>
+<li>api.add(configEvent, meta, options, callback(err, storage))</li>
+<li>api.get(storageId, options, callback(err, storage))</li>
+<li>api.remove(storageId, options, callback(err))</li>
+<li>api.getLedgerIterator(options, callback(err, iterator))</li>
+</ul>
+</li>
+<li>Block Storage API<ul>
+<li>storage.blocks.add(block, meta, options, callback(err, result))</li>
+<li>storage.blocks.get(blockId, options, callback(err, result))</li>
+<li>storage.blocks.getAll(blockId, options, callback(err, result))</li>
+<li>storage.blocks.getGenesis(options, callback(err, result))</li>
+<li>storage.blocks.getLatest(options, callback(err, result))</li>
+<li>storage.blocks.update(blockHash, patch, options, callback(err))</li>
+<li>storage.blocks.remove(blockHash, options, callback(err))</li>
+</ul>
+</li>
+<li>Event Storage API<ul>
+<li>storage.events.add(event, meta, options, callback(err, result))</li>
+<li>storage.events.get(eventHash, options, callback(err, result))</li>
+<li>storage.events.getLatestConfig(options, callback(err, result))</li>
+<li>storage.events.exists(eventHash, callback(err, result))</li>
+<li>storage.events.update(eventHash, patch, options, callback(err))</li>
+<li>storage.events.remove(eventHash, options, callback(err))</li>
+</ul>
+</li>
+<li>Database Driver API<ul>
+<li>storage.driver</li>
+</ul>
+</li>
+</ul>
+<h2>Configuration</h2><p>Configuration options and their defaults are documented
+in <a href="lib/config.js">lib/config.js</a>.</p>
+<h2>Using the API</h2><p>The API in this module is designed to be used by the
+<a href="https://github.com/digitalbazaar/bedrock-ledger/">bedrock-ledger</a>
+module. Do not use this API directly unless you are
+creating a new ledger node API.</p>
+<h2>Ledger API</h2><p>The MongoDB ledger storage API is capable of mapping ledger node
+storage requests to a set of MongoDB collections.</p>
+<h3>Creating a Ledger</h3><p>Add a new ledger given an initial configuration event,
+configuration event metadata, and a set of options.</p>
+<ul>
+<li>configEvent - the initial configuration event for the ledger.</li>
+<li>meta - the metadata associated with the configuration event.</li>
+<li>options - a set of options used when creating the ledger.</li>
+<li>callback(err, storage) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise</li>
+<li>storage - The storage to use for the purposes of accessing
+and modifying the ledger.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const blsMongodb = require('bedrock-ledger-storage-mongodb');
+
+const configEvent = {
+  '@context': 'https://w3id.org/webledger/v1',
+  type: 'WebLedgerConfigurationEvent',
+  ledgerConfiguration: [{
+    type: 'WebLedgerConfiguration',
+    ledger: 'did:v1:eb8c22dc-bde6-4315-92e2-59bd3f3c7d59',
+    consensusMethod: {
+      type: 'UnilateralConsensus2017'
+    },
+    eventGuard: [{
+      type: 'ProofOfSignature2017',
+      supportedEventType: 'WebLedgerOperationEvent',
+      approvedSigner: [
+        'did:v1:53ebca61-5687-4558-b90a-03167e4c2838/keys/144'
+      ],
+      minimumSignaturesRequired: 1
+    }, {
+      type: 'ProofOfSignature2017',
+      supportedEventType: 'WebLedgerConfigurationEvent',
+      approvedSigner: [
+        'did:v1:53ebca61-5687-4558-b90a-03167e4c2838/keys/144'
+      ],
+      minimumSignaturesRequired: 1
+    }]
+  }],
+  signature: {
+    type: 'RsaSignature2017',
+    created: '2017-10-24T05:33:31Z',
+    creator: 'did:v1:53ebca61-5687-4558-b90a-03167e4c2838/keys/144',
+    domain: 'did:v1:eb8c22dc-bde6-4315-92e2-59bd3f3c7d59',
+    signatureValue: 'eyiOiJJ0eXAK...EjXkgFWFO'
+  }
+};
+const meta = {
+  eventHash: myBlockHasher(configBlock),
+};
+const options = {};
+
+blsMongodb.add(configEvent, meta, options, (err, storage) => {
+  if(err) {
+    throw new Error('Failed to create ledger:', err);
+  }
+
+  // use the storage API to read and write to the ledger
+  storage.events.add( /* create new events */ );
+  storage.blocks.add( /* create new blocks */ );
+});</code></pre><h3>Retrieving a Ledger</h3><p>Retrieves a storage API for performing operations on a ledger.</p>
+<ul>
+<li>storageId - a URI identifying the ledger storage.</li>
+<li>options - a set of options used when retrieving the storage API.</li>
+<li>callback(err, storage) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise</li>
+<li>storage - A ledger storage API.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const blsMongodb = require('bedrock-ledger-storage-mongodb');
+
+const storageId = 'urn:uuid:eb8c22dc-bde6-4315-92e2-59bd3f3c7d59';
+const options = {};
+
+blsMongodb.get(storageId, options, (err, storage) => {
+  storage.events.add( /* write new events to the ledger storage */ );
+  /* ... perform other operations on ledger storage ... */
+});</code></pre><h3>Remove a Ledger</h3><p>Removes a ledger given a set of options.</p>
+<ul>
+<li>storageId - a URI identifying the ledger storage.</li>
+<li>options - a set of options used when deleting the ledger.</li>
+<li>callback(err) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const blsMongodb = require('bedrock-ledger-storage-mongodb');
+
+const storageId = 'urn:uuid:eb8c22dc-bde6-4315-92e2-59bd3f3c7d59';
+const options = {};
+
+blsMongodb.remove(storageId, options, err => {
+  if(err) {
+    throw new Error('Failed to delete ledger:', err);
+  }
+
+  console.log('Ledger deletion successful!');
+});</code></pre><h3>Get an Iterator for All Ledgers</h3><p>Gets an iterator that will iterate over all ledger storage
+APIs in the system. The iterator will return a
+ledger storage API that can then be used to operate directly on
+the ledger storage.</p>
+<ul>
+<li>options - a set of options to use when retrieving the list.</li>
+<li>callback(err, iterator) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+<li>iterator - An iterator that returns ledger storage APIs.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const options = {};
+
+bedrockLedger.getLedgerIterator(options, (err, iterator) => {
+  if(err) {
+    throw new Error('Failed to fetch iterator for ledgers:', err);
+  }
+
+  for(let storage of iterator) {
+    console.log('Ledger Storage ID:',  storage.id);
+  }
+});</code></pre><h2>Blocks API</h2><p>The blocks API is used to perform operations on blocks associated with a
+particular ledger.</p>
+<h3>Add a Block</h3><p>Adds a block in the ledger given a block, metadata associated
+with the block, and a set of options.</p>
+<ul>
+<li>block - the block to create in the ledger.</li>
+<li>meta - the metadata associated with the block.<ul>
+<li>blockHash (required) - a unique identifier for the block that
+  the storage subsystem will use to index the block.</li>
+</ul>
+</li>
+<li>options - a set of options used when creating the block.</li>
+<li>callback(err) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+<li>result - the result of the operation.<ul>
+<li>block - the block that was committed to storage.</li>
+<li>meta - the metadata that was committed to storage.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const block = {
+  '@context': 'https://w3id.org/webledger/v1',
+  id: 'did:v1:eb8c22dc-bde6-4315-92e2-59bd3f3c7d59/blocks/2',
+  type: 'WebLedgerEventBlock',
+  event: [/* { ... JSON-LD-OBJECT ... }, ... */],
+  previousBlock: 'did:v1:e7adbe7-79f2-425a-9dfb-76a234782f30/blocks/1',
+  previousBlockHash: 'ni:///sha-256;cGBSKHn2cBJ563oSt3SAf4OxZXXfwtSxj1xFO5LtkGkW',
+  signature: {
+    type: 'RsaSignature2017',
+    created: '2017-05-10T19:47:15Z',
+    creator: 'http://example.com/keys/789',
+    signatureValue: 'JoS27wqa...BFMgXIMw=='
+  }
+};
+const meta = {
+  blockHash: myBlockHasher(block),
+  pending: true
+};
+const options = {};
+
+storage.blocks.add(block, options, (err, result) => {
+  if(err) {
+    throw new Error('Failed to create the block:', err);
+  }
+
+  console.log('Block creation successful:', result.block, result.meta);
+});</code></pre><h3>Get a Consensus Block</h3><p>Gets a block that has achieved consensus and its associated metadata
+from the ledger given a blockId.</p>
+<ul>
+<li>blockId - the identifier of the consensus block to fetch from the ledger.</li>
+<li>options - a set of options used when retrieving the block.</li>
+<li>callback(err, records) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+<li>result - the result of the retrieval.<ul>
+<li>block - the block.</li>
+<li>meta - metadata about the block.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const blockId = 'did:v1:eb8c22dc-bde6-4315-92e2-59bd3f3c7d59/blocks/1';
+const options = {};
+
+storage.blocks.get(blockId, options, (err, result) => {
+  if(err) {
+    throw new Error('Block query failed:', err);
+  }
+
+  console.log('Block:', result.block, result.meta);
+});</code></pre><h3>Get a All Blocks with ID</h3><p>Gets all blocks matching a given blockId even if they have not
+achieved consensus.</p>
+<ul>
+<li>blockId - the identifier of the block(s) to fetch from the ledger.</li>
+<li>options - a set of options used when retrieving the block(s).<ul>
+<li>callback(err, iterator) - the callback to call when finished.</li>
+<li>err - An Error if an error occurred, null otherwise.</li>
+<li>iterator - an iterator for all of the returned blocks.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const blockId = 'did:v1:eb8c22dc-bde6-4315-92e2-59bd3f3c7d59/blocks/1';
+const options = {};
+
+// get all blocks with given blockId
+ledgerStorage.blocks.getAll(blockId, options, (err, iterator) => {
+  async.eachSeries(iterator, (promise, callback) => {
+    promise.then(result => {
+      console.log('Got block:', result.meta.blockHash);
+      callback();
+    });
+  });
+});</code></pre><h3>Get Genesis Block</h3><p>Retrieves the genesis block from the ledger.</p>
+<ul>
+<li>options - a set of options used when retrieving the genesis block.</li>
+<li>callback(err, result) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+<li>result - the genesis block.<ul>
+<li>genesisBlock - the genesis block and meta.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const options = {};
+
+storage.blocks.getGenesis(options, (err, result) => {
+  if(err) {
+    throw new Error('Failed to get genesis block:', err);
+  }
+
+  console.log('Genesis block:', result.genesisBlock);
+});</code></pre><h3>Get Latest Blocks</h3><p>Retrieves the latest events block and the latest configuration
+block from the ledger.</p>
+<ul>
+<li>options - a set of options used when retrieving the latest blocks.</li>
+<li>callback(err, result) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+<li>result - the latest events and configuration blocks.<ul>
+<li>configurationBlock - the latest configuration block and meta.</li>
+<li>eventBlock - the latest event block and meta.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const options = {};
+
+storage.blocks.getLatest(options, (err, result) => {
+  if(err) {
+    throw new Error('Failed to get latest blocks:', err);
+  }
+
+  console.log('Latest config block:', result.configurationBlock);
+  console.log('Latest events block:', result.eventsBlock);
+});</code></pre><h3>Update an Existing Block</h3><p>Update an existing block in the ledger given a blockHash,
+an array of patch instructions, and a set of options.</p>
+<ul>
+<li>blockHash - the hash of the block to update.</li>
+<li>patch - the patch instructions to execute on the block.</li>
+<li>options - a set of options used when updating the block.</li>
+<li>callback(err) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const blockHash = 'ni:///sha-256;TlXpOLkbji1zfToxarRb0L7R7a_a9pHQs10Pk-hwqFs';
+const patch = [{
+  op: 'unset',
+  changes: {
+    meta: {
+      pending: 1
+    }
+  }
+}, {
+  op: 'set',
+  changes: {
+    meta: {
+      consensus: Date.now()
+    }
+  }
+}, {
+  op: 'add',
+  changes: {
+    meta: {
+      someArray: 'c'
+    }
+  }
+}, {
+  op: 'remove',
+  changes: {
+    meta: {
+      someOtherArray: 'z'
+    }
+  }
+}];
+
+const options = {};
+
+storage.blocks.update(blockHash, patch, options, (err) => {
+  if(err) {
+    throw new Error('Block update failed:', err);
+  }
+
+  console.log('Block update succeeded.');
+});</code></pre><h3>Remove a Block</h3><p>Remove a block in the ledger given a block hash and a set of options.</p>
+<ul>
+<li>blockHash - the block with the given hash to delete in the ledger.</li>
+<li>options - a set of options used when deleting the block.</li>
+<li>callback(err) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const blockHash = 'ni:///sha-256;TlXpOLkbji1zfToxarRb0L7R7a_a9pHQs10Pk-hwqFs';
+const options = {};
+
+storage.blocks.remove(blockHash, options, (err) => {
+  if(err) {
+    throw new Error('Block delete failed:', err);
+  }
+
+  console.log('Successfully deleted block.');
+});</code></pre><h2>Events API</h2><p>The events API is used to perform operations on events associated with a
+particular ledger.</p>
+<h3>Add an Event</h3><p>Adds an event to associate with a ledger given an
+event and a set of options.</p>
+<ul>
+<li>event - the event to associate with a ledger.</li>
+<li>meta - the metadata that is associated with the event.<ul>
+<li>eventHash (required) - a unique identifier for the event that
+  the storage subsystem will use to index the event.</li>
+</ul>
+</li>
+<li>options - a set of options used when creating the event.</li>
+<li>callback(err, result) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+<li>result - the result of the operation.<ul>
+<li>event - the event that was committed to storage.</li>
+<li>meta - the metadata that was committed to storage.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const event = {
+  '@context': 'https://w3id.org/webledger/v1',
+  type: 'WebLedgerOperationEvent',
+  operation: 'Create',
+  input: [{
+    '@context': 'https://schema.org/',
+    id: 'https://example.com/events/123456',
+    type: 'Concert',
+    name: 'Big Band Concert in New York City',
+    startDate: '2017-07-14T21:30',
+    location: 'https://example.org/the-venue',
+    offers: {
+      type: 'Offer',
+      price: '13.00',
+      priceCurrency: 'USD',
+      url: 'https://www.ticketfly.com/purchase/309433'
+    }
+  }],
+  signature: {
+    type: 'RsaSignature2017',
+    created: '2017-05-10T19:47:15Z',
+    creator: 'https://www.ticketfly.com/keys/789',
+    signatureValue: 'JoS27wqa...BFMgXIMw=='
+  }
+};
+
+const meta = {
+  eventHash: myEventHasher(event),
+  pending: true
+};
+const options = {};
+
+storage.events.add(event, meta, options, (err, result) => {
+  if(err) {
+    throw new Error('Failed to create the event:', err);
+  }
+
+  console.log('Event creation successful:', result.event, result.meta);
+});</code></pre><h3>Get an Event</h3><p>Gets one or more events in the ledger given a query and a set of options.</p>
+<ul>
+<li>eventHash - the identifier of the event to fetch from storage.</li>
+<li>options - a set of options used when retrieving the event.</li>
+<li>callback(err, result) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+<li>result - the result of the retrieval<ul>
+<li>event - the event.</li>
+<li>meta - metadata about the event.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const eventHash = 'ni:///sha-256;xarRb0L7R7a_a9pHQs10Pk-hwqFsTlXpOLkbji1zfTo';
+const options = {};
+
+storage.events.get(eventHash, options, (err, result) => {
+  if(err) {
+    throw new Error('Event retrieval failed:', err);
+  }
+
+  console.log('Event:', result.event, result.meta);
+});</code></pre><h3>Determine If an Event Exists</h3><p>Determine if one or more events exist given the event hash(es);</p>
+<ul>
+<li>eventHash - a string or array of event hashes.</li>
+<li>callback(err, result) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+<li>result - the result of the check: true if all the events exist, false if
+  <em>any</em> of the events do not exist.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const eventHash = 'ni:///sha-256;xarRb0L7R7a_a9pHQs10Pk-hwqFsTlXpOLkbji1zfTo';
+
+storage.events.exists(eventHash, (err, result) => {
+  if(err) {
+    throw new Error('Event retrieval failed:', err);
+  }
+  if(result) {
+    console.log('The event exists.');
+  } else {
+    console.log('The event does not exist.');
+  }
+});</code></pre><h3>Get the Latest Config Event</h3><p>Gets the latest configuration event that has consensus.</p>
+<ul>
+<li>options - a set of options used when retrieving the event.</li>
+<li>callback(err, result) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+<li>result - the result of the retrieval<ul>
+<li>event - the event.</li>
+<li>meta - metadata about the event.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const options = {};
+
+storage.events.getLatestConfig(options, (err, result) => {
+  if(err) {
+    throw new Error('Config event retrieval failed:' + err);
+  }
+
+  console.log('Latest config event:', result.event, result.meta);
+});</code></pre><h3>Update an Existing Event</h3><p>Update an existing event associated with the ledger given
+an eventHash, an array of patch instructions, and a set of options.</p>
+<ul>
+<li>eventHash - the ID of the event to update</li>
+<li>patch - a list of patch commands for the event</li>
+<li>options - a set of options used when updating the event.</li>
+<li>callback(err, result) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+<li>result - the value of the updated event.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const eventHash = 'ni:///sha-256;ji1zfToxarRb0L7R7a_a9pHQs10Pk-hwqFsTlXpOLkb';
+const patch = [{
+  op: 'delete',
+  changes: {
+    meta: {
+      pending: true
+    }
+  }
+}, {
+  op: 'set',
+  changes: {
+    meta: {
+      block: 'did:v1:eb8c22dc-bde6-4315-92e2-59bd3f3c7d59/blocks/2'
+    }
+  }
+}, {
+  op: 'add',
+  changes: {
+    event: {
+      signature: { /* signature goes here */ }
+    }
+  }
+}];
+const options = {};
+
+storage.events.update(eventHash, patch, options, (err) => {
+  if(err) {
+    throw new Error('Event update failed:', err);
+  }
+
+  console.log('Event update succeeded.');
+});</code></pre><h3>Remove an Event</h3><p>Remove an event associated with the ledger given an event hash and a set
+of options.</p>
+<ul>
+<li>eventHash - the hash of the event to delete.</li>
+<li>options - a set of options used when deleting the event.</li>
+<li>callback(err) - the callback to call when finished.<ul>
+<li>err - An Error if an error occurred, null otherwise.</li>
+</ul>
+</li>
+</ul>
+<pre class="prettyprint source lang-javascript"><code>const eventHash = 'ni:///sha-256;xarRb0L7R7a_a9pHQs10Pk-hwqFsTlXpOLkbji1zfTo';
+const options = {};
+
+storage.events.remove(eventHash, options, (err) => {
+  if(err) {
+    throw new Error('Event delete failed:', err);
+  }
+
+  console.log('Successfully deleted event.');
+});</code></pre><h2>Raw Driver API</h2><p>The raw driver API enables access to the low level database driver.
+Usage of the raw driver to enact database changes is strongly
+discouraged as it breaks the storage layer abstraction.</p>
+<pre class="prettyprint source lang-javascript"><code>const mongodbDriver = storage.driver</code></pre>
+</article>
+
+</section>
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Aug 16 2018 10:01:56 GMT-0700 (PDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
