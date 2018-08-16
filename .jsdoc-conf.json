@@ -4,7 +4,9 @@
     },
     "source": {
         "include": [
-            "bedrock-ledger-storage-mongodb/lib"
+            "bedrock-ledger-storage-mongodb/lib",
+            "bedrock-ledger-agent/lib",
+            "bedrock-ledger-node/lib"
         ],
         "includePattern": "\\.js$",
         "excludePattern": "node_modules"
