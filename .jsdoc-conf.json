@@ -1,0 +1,34 @@
+{
+    "tags": {
+        "allowUnknownTags": false
+    },
+    "source": {
+        "include": [
+            "bedrock-ledger-storage-mongodb/lib"
+        ],
+        "includePattern": "\\.js$",
+        "excludePattern": "node_modules"
+    },
+    "plugins": [
+        "plugins/markdown"
+    ],
+    "opts": {
+        "systemName": "Veres Delta Documentation",
+        "copyright": "Copyright 2018, Digital Bazaar",
+        "template": "node_modules/docdash",
+        "readme": "README.md",
+        "encoding": "utf8",
+        "destination": "docs/",
+        "recurse": true,
+        "verbose": true,
+        "tutorials": "index"
+    },
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false
+    },
+    "docdash": {
+        "static": true,
+        "sort": true
+    }
+}

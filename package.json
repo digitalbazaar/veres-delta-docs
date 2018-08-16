@@ -1,0 +1,28 @@
+{
+  "name": "veres-delta-docs",
+  "version": "1.0.0",
+  "description": "Builds the Veres Delta documentation",
+  "main": " ",
+  "scripts": {
+    "test": "true",
+    "docs:update": "git submodule update --recursive --remote",
+    "docs:build": "./build-index.sh && jsdoc -c ./.jsdoc-conf.json",
+    "docs:publish": "gh-pages --repo https://$GH_TOKEN@github.com/digitalbazaar/veres-delta-docs.git --dist docs",
+    "docs:clean": "rm -rf docs index/*.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digitalbazaar/veres-delta-docs.git"
+  },
+  "author": "Adam Powers",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/digitalbazaar/veres-delta-docs/issues"
+  },
+  "homepage": "https://github.com/digitalbazaar/veres-delta-docs#readme",
+  "dependencies": {
+    "docdash": "^0.4.0",
+    "gh-pages": "^1.2.0",
+    "jsdoc": "^3.5.5"
+  }
+}

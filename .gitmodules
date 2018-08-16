@@ -1,0 +1,3 @@
+[submodule "bedrock-ledger-storage-mongodb"]
+	path = bedrock-ledger-storage-mongodb
+	url = https://github.com/digitalbazaar/bedrock-ledger-storage-mongodb
