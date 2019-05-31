@@ -69,7 +69,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bedrock-ledger-node_lib_ledger-node-blocks.js.html">bedrock-ledger-node/lib/ledger-node-blocks.js</a>, <a href="bedrock-ledger-node_lib_ledger-node-blocks.js.html#line11">line 11</a>
+        <a href="bedrock-ledger-node_lib_ledger-node-blocks.js.html">bedrock-ledger-node/lib/ledger-node-blocks.js</a>, <a href="bedrock-ledger-node_lib_ledger-node-blocks.js.html#line12">line 12</a>
     </li></ul></dd>
     
 
@@ -211,12 +211,12 @@
 options.</p>
 <p>event - the event to associate with a ledger.
 meta - the metadata that is associated with the event.
-  eventHash - the hash of the event data.
+eventHash - the hash of the event data.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the operation.
-    event - the event that was committed to storage.
-    meta - the metadata that was committed to storage.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the operation.
+event - the event that was committed to storage.
+meta - the metadata that was committed to storage.</p>
 </div>
 
 
@@ -351,8 +351,8 @@ block.</p>
             
 
             <td class="description last"><p>the block to create in the ledger.
-  blockHeight - the height of the block.
-  event - an array of events associated with the block.</p></td>
+blockHeight - the height of the block.
+event - an array of events associated with the block.</p></td>
         </tr>
 
     
@@ -371,7 +371,7 @@ block.</p>
             
 
             <td class="description last"><p>when true (default), a bedrock event is emitted to inform
- listeners that a block has been added.</p></td>
+listeners that a block has been added.</p></td>
         </tr>
 
     
@@ -390,7 +390,7 @@ block.</p>
             
 
             <td class="description last"><p>the metadata associated with the block.
-  blockHash - the hash value of the block.</p></td>
+blockHash - the hash value of the block.</p></td>
         </tr>
 
     
@@ -409,10 +409,10 @@ block.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the operation.
-    block - the block that was committed to storage.
-    meta - the metadata that was committed to storage.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the result of the operation.
+block - the block that was committed to storage.
+meta - the metadata that was committed to storage.</p></td>
         </tr>
 
     
@@ -495,7 +495,7 @@ block.</p>
 <p>operation - the operation to perform.
 options - a set of options used when adding the operation.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -586,7 +586,7 @@ and the state machine processes it.</p>
 [genesis] - boolean - is this genesis config
 [genesisBlock] - a genesis block for a ledger
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -1128,8 +1128,8 @@ callback(err) - the callback to call when finished.
 <div class="description">
     <p>Gets the current ledgerConfiguration for the ledger.</p>
 <p>callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  ledgerConfiguration - the latest ledgerConfiguration or <code>null</code> if none.</p>
+err - An Error if an error occurred, null otherwise.
+ledgerConfiguration - the latest ledgerConfiguration or <code>null</code> if none.</p>
 </div>
 
 
@@ -1327,8 +1327,8 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block with the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block with the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -1411,7 +1411,7 @@ callback(err) - the callback to call when finished.
 <p>[maxBlockHeight] - limit the record history to the specified block height.
 recordId - the URI of the object to fetch.
 callback(err, {meta, record}) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -1498,10 +1498,10 @@ callback(err, {meta, record}) - the callback to call when finished.
     <p>Gets an event in the ledger given a query and a set of options.</p>
 <p>eventHash - the hash of the event to fetch from storage.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -1590,8 +1590,8 @@ configuration block and latest consensus block, given a set of options.</p>
 <p>actor - the actor performing the action.
 options - a set of options used when retrieving the ledger metadata.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  ledgerMeta - metadata about the ledger.</p>
+err - An Error if an error occurred, null otherwise.
+ledgerMeta - metadata about the ledger.</p>
 </div>
 
 
@@ -1680,8 +1680,8 @@ of options.</p>
 <p>eventId - the event to fetch from the ledger.
 options - a set of options used when retrieving the event.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  event - the event that was retrieved from the database.</p>
+err - An Error if an error occurred, null otherwise.
+event - the event that was retrieved from the database.</p>
 </div>
 
 
@@ -1879,7 +1879,7 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -1963,10 +1963,10 @@ is active for blocks that are <em>subsequent</em> to the block that includes
 the ledger configuration event itself.</p>
 <p>blockHeight - the blockHeight used to locate the ledger configuration.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval.
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval.
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -2119,8 +2119,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>iterator) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  iterator - an iterator for all of the returned blocks.</p></td>
+err - An Error if an error occurred, null otherwise.
+iterator - an iterator for all of the returned blocks.</p></td>
         </tr>
 
     
@@ -2267,8 +2267,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block with the given block height that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block with the given block height that has consensus.</p></td>
         </tr>
 
     
@@ -2561,9 +2561,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result with the genesis block.
-    genesisBlock - the genesis block and its meta.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the result with the genesis block.
+genesisBlock - the genesis block and its meta.</p></td>
         </tr>
 
     
@@ -2644,7 +2644,7 @@ achieved consensus.</p>
 <div class="description">
     <p>Gets the genesis block from the ledger.</p>
 <p>callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -2778,7 +2778,7 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -2907,9 +2907,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the block.
-    eventBlock - the latest events block and meta.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the block.
+eventBlock - the latest events block and meta.</p></td>
         </tr>
 
     
@@ -2990,10 +2990,10 @@ achieved consensus.</p>
 <div class="description">
     <p>Gets the latest configuration event that has consensus.</p>
 <p>callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval.
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval.
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -3127,9 +3127,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the block.
-    eventBlock - the latest events block summary.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the block.
+eventBlock - the latest events block summary.</p></td>
         </tr>
 
     
@@ -3296,7 +3296,7 @@ achieved consensus.</p>
             
 
             <td class="description last"><p><code>false</code> to retrieve a summary for a non-consensus
-  block instead.</p></td>
+block instead.</p></td>
         </tr>
 
     
@@ -3351,8 +3351,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block summary for the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block summary for the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -3573,8 +3573,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block summary for the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block summary for the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -3658,7 +3658,7 @@ set of options.</p>
 <p>eventHash - the hash of the event to delete.
 options - a set of options used when deleting the event.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -3810,7 +3810,7 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -3894,8 +3894,8 @@ eventId, an array of patch instructions, and a set of options.</p>
 <p>eventHash - the ID of the event to update
 patch - a list of patch commands for the event
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the value of the updated event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the value of the updated event.</p>
 </div>
 
 
@@ -4066,7 +4066,7 @@ patch instructions, and a set of options.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -4148,7 +4148,7 @@ patch instructions, and a set of options.</p>
     <p>Validates an operation against the current configuration.</p>
 <p>operation - the operation to validate.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -4235,7 +4235,7 @@ callback(err) - the callback to call when finished.
     <p>Validates a ledgerConfiguration.</p>
 <p>ledgerConfiguration - the ledgerConfiguration to validate.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -4313,7 +4313,7 @@ particular ledger.</p></div>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bedrock-ledger-storage-mongodb_lib_LedgerBlockStorage.js.html">bedrock-ledger-storage-mongodb/lib/LedgerBlockStorage.js</a>, <a href="bedrock-ledger-storage-mongodb_lib_LedgerBlockStorage.js.html#line20">line 20</a>
+        <a href="bedrock-ledger-storage-mongodb_lib_LedgerBlockStorage.js.html">bedrock-ledger-storage-mongodb/lib/LedgerBlockStorage.js</a>, <a href="bedrock-ledger-storage-mongodb_lib_LedgerBlockStorage.js.html#line21">line 21</a>
     </li></ul></dd>
     
 
@@ -4455,12 +4455,12 @@ particular ledger.</p></div>
 options.</p>
 <p>event - the event to associate with a ledger.
 meta - the metadata that is associated with the event.
-  eventHash - the hash of the event data.
+eventHash - the hash of the event data.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the operation.
-    event - the event that was committed to storage.
-    meta - the metadata that was committed to storage.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the operation.
+event - the event that was committed to storage.
+meta - the metadata that was committed to storage.</p>
 </div>
 
 
@@ -4595,8 +4595,8 @@ block.</p>
             
 
             <td class="description last"><p>the block to create in the ledger.
-  blockHeight - the height of the block.
-  event - an array of events associated with the block.</p></td>
+blockHeight - the height of the block.
+event - an array of events associated with the block.</p></td>
         </tr>
 
     
@@ -4615,7 +4615,7 @@ block.</p>
             
 
             <td class="description last"><p>when true (default), a bedrock event is emitted to inform
- listeners that a block has been added.</p></td>
+listeners that a block has been added.</p></td>
         </tr>
 
     
@@ -4634,7 +4634,7 @@ block.</p>
             
 
             <td class="description last"><p>the metadata associated with the block.
-  blockHash - the hash value of the block.</p></td>
+blockHash - the hash value of the block.</p></td>
         </tr>
 
     
@@ -4653,10 +4653,10 @@ block.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the operation.
-    block - the block that was committed to storage.
-    meta - the metadata that was committed to storage.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the result of the operation.
+block - the block that was committed to storage.
+meta - the metadata that was committed to storage.</p></td>
         </tr>
 
     
@@ -4739,7 +4739,7 @@ block.</p>
 <p>operation - the operation to perform.
 options - a set of options used when adding the operation.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -4830,7 +4830,7 @@ and the state machine processes it.</p>
 [genesis] - boolean - is this genesis config
 [genesisBlock] - a genesis block for a ledger
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -5372,8 +5372,8 @@ callback(err) - the callback to call when finished.
 <div class="description">
     <p>Gets the current ledgerConfiguration for the ledger.</p>
 <p>callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  ledgerConfiguration - the latest ledgerConfiguration or <code>null</code> if none.</p>
+err - An Error if an error occurred, null otherwise.
+ledgerConfiguration - the latest ledgerConfiguration or <code>null</code> if none.</p>
 </div>
 
 
@@ -5571,8 +5571,8 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block with the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block with the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -5655,7 +5655,7 @@ callback(err) - the callback to call when finished.
 <p>[maxBlockHeight] - limit the record history to the specified block height.
 recordId - the URI of the object to fetch.
 callback(err, {meta, record}) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -5742,10 +5742,10 @@ callback(err, {meta, record}) - the callback to call when finished.
     <p>Gets an event in the ledger given a query and a set of options.</p>
 <p>eventHash - the hash of the event to fetch from storage.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -5834,8 +5834,8 @@ configuration block and latest consensus block, given a set of options.</p>
 <p>actor - the actor performing the action.
 options - a set of options used when retrieving the ledger metadata.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  ledgerMeta - metadata about the ledger.</p>
+err - An Error if an error occurred, null otherwise.
+ledgerMeta - metadata about the ledger.</p>
 </div>
 
 
@@ -5924,8 +5924,8 @@ of options.</p>
 <p>eventId - the event to fetch from the ledger.
 options - a set of options used when retrieving the event.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  event - the event that was retrieved from the database.</p>
+err - An Error if an error occurred, null otherwise.
+event - the event that was retrieved from the database.</p>
 </div>
 
 
@@ -6123,7 +6123,7 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -6207,10 +6207,10 @@ is active for blocks that are <em>subsequent</em> to the block that includes
 the ledger configuration event itself.</p>
 <p>blockHeight - the blockHeight used to locate the ledger configuration.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval.
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval.
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -6363,8 +6363,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>iterator) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  iterator - an iterator for all of the returned blocks.</p></td>
+err - An Error if an error occurred, null otherwise.
+iterator - an iterator for all of the returned blocks.</p></td>
         </tr>
 
     
@@ -6511,8 +6511,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block with the given block height that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block with the given block height that has consensus.</p></td>
         </tr>
 
     
@@ -6805,9 +6805,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result with the genesis block.
-    genesisBlock - the genesis block and its meta.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the result with the genesis block.
+genesisBlock - the genesis block and its meta.</p></td>
         </tr>
 
     
@@ -6888,7 +6888,7 @@ achieved consensus.</p>
 <div class="description">
     <p>Gets the genesis block from the ledger.</p>
 <p>callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -7022,7 +7022,7 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -7151,9 +7151,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the block.
-    eventBlock - the latest events block and meta.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the block.
+eventBlock - the latest events block and meta.</p></td>
         </tr>
 
     
@@ -7234,10 +7234,10 @@ achieved consensus.</p>
 <div class="description">
     <p>Gets the latest configuration event that has consensus.</p>
 <p>callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval.
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval.
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -7371,9 +7371,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the block.
-    eventBlock - the latest events block summary.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the block.
+eventBlock - the latest events block summary.</p></td>
         </tr>
 
     
@@ -7540,7 +7540,7 @@ achieved consensus.</p>
             
 
             <td class="description last"><p><code>false</code> to retrieve a summary for a non-consensus
-  block instead.</p></td>
+block instead.</p></td>
         </tr>
 
     
@@ -7595,8 +7595,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block summary for the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block summary for the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -7817,8 +7817,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block summary for the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block summary for the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -7902,7 +7902,7 @@ set of options.</p>
 <p>eventHash - the hash of the event to delete.
 options - a set of options used when deleting the event.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -8054,7 +8054,7 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -8138,8 +8138,8 @@ eventId, an array of patch instructions, and a set of options.</p>
 <p>eventHash - the ID of the event to update
 patch - a list of patch commands for the event
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the value of the updated event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the value of the updated event.</p>
 </div>
 
 
@@ -8310,7 +8310,7 @@ patch instructions, and a set of options.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -8392,7 +8392,7 @@ patch instructions, and a set of options.</p>
     <p>Validates an operation against the current configuration.</p>
 <p>operation - the operation to validate.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -8479,7 +8479,7 @@ callback(err) - the callback to call when finished.
     <p>Validates a ledgerConfiguration.</p>
 <p>ledgerConfiguration - the ledgerConfiguration to validate.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -8556,7 +8556,7 @@ callback(err) - the callback to call when finished.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bedrock-ledger-node_lib_ledger-node.js.html">bedrock-ledger-node/lib/ledger-node.js</a>, <a href="bedrock-ledger-node_lib_ledger-node.js.html#line16">line 16</a>
+        <a href="bedrock-ledger-node_lib_ledger-node.js.html">bedrock-ledger-node/lib/ledger-node.js</a>, <a href="bedrock-ledger-node_lib_ledger-node.js.html#line17">line 17</a>
     </li></ul></dd>
     
 
@@ -8698,12 +8698,12 @@ callback(err) - the callback to call when finished.
 options.</p>
 <p>event - the event to associate with a ledger.
 meta - the metadata that is associated with the event.
-  eventHash - the hash of the event data.
+eventHash - the hash of the event data.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the operation.
-    event - the event that was committed to storage.
-    meta - the metadata that was committed to storage.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the operation.
+event - the event that was committed to storage.
+meta - the metadata that was committed to storage.</p>
 </div>
 
 
@@ -8838,8 +8838,8 @@ block.</p>
             
 
             <td class="description last"><p>the block to create in the ledger.
-  blockHeight - the height of the block.
-  event - an array of events associated with the block.</p></td>
+blockHeight - the height of the block.
+event - an array of events associated with the block.</p></td>
         </tr>
 
     
@@ -8858,7 +8858,7 @@ block.</p>
             
 
             <td class="description last"><p>when true (default), a bedrock event is emitted to inform
- listeners that a block has been added.</p></td>
+listeners that a block has been added.</p></td>
         </tr>
 
     
@@ -8877,7 +8877,7 @@ block.</p>
             
 
             <td class="description last"><p>the metadata associated with the block.
-  blockHash - the hash value of the block.</p></td>
+blockHash - the hash value of the block.</p></td>
         </tr>
 
     
@@ -8896,10 +8896,10 @@ block.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the operation.
-    block - the block that was committed to storage.
-    meta - the metadata that was committed to storage.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the result of the operation.
+block - the block that was committed to storage.
+meta - the metadata that was committed to storage.</p></td>
         </tr>
 
     
@@ -8982,7 +8982,7 @@ block.</p>
 <p>operation - the operation to perform.
 options - a set of options used when adding the operation.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -9073,7 +9073,7 @@ and the state machine processes it.</p>
 [genesis] - boolean - is this genesis config
 [genesisBlock] - a genesis block for a ledger
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -9615,8 +9615,8 @@ callback(err) - the callback to call when finished.
 <div class="description">
     <p>Gets the current ledgerConfiguration for the ledger.</p>
 <p>callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  ledgerConfiguration - the latest ledgerConfiguration or <code>null</code> if none.</p>
+err - An Error if an error occurred, null otherwise.
+ledgerConfiguration - the latest ledgerConfiguration or <code>null</code> if none.</p>
 </div>
 
 
@@ -9814,8 +9814,8 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block with the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block with the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -9898,7 +9898,7 @@ callback(err) - the callback to call when finished.
 <p>[maxBlockHeight] - limit the record history to the specified block height.
 recordId - the URI of the object to fetch.
 callback(err, {meta, record}) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -9985,10 +9985,10 @@ callback(err, {meta, record}) - the callback to call when finished.
     <p>Gets an event in the ledger given a query and a set of options.</p>
 <p>eventHash - the hash of the event to fetch from storage.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -10077,8 +10077,8 @@ configuration block and latest consensus block, given a set of options.</p>
 <p>actor - the actor performing the action.
 options - a set of options used when retrieving the ledger metadata.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  ledgerMeta - metadata about the ledger.</p>
+err - An Error if an error occurred, null otherwise.
+ledgerMeta - metadata about the ledger.</p>
 </div>
 
 
@@ -10167,8 +10167,8 @@ of options.</p>
 <p>eventId - the event to fetch from the ledger.
 options - a set of options used when retrieving the event.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  event - the event that was retrieved from the database.</p>
+err - An Error if an error occurred, null otherwise.
+event - the event that was retrieved from the database.</p>
 </div>
 
 
@@ -10366,7 +10366,7 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -10450,10 +10450,10 @@ is active for blocks that are <em>subsequent</em> to the block that includes
 the ledger configuration event itself.</p>
 <p>blockHeight - the blockHeight used to locate the ledger configuration.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval.
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval.
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -10606,8 +10606,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>iterator) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  iterator - an iterator for all of the returned blocks.</p></td>
+err - An Error if an error occurred, null otherwise.
+iterator - an iterator for all of the returned blocks.</p></td>
         </tr>
 
     
@@ -10754,8 +10754,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block with the given block height that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block with the given block height that has consensus.</p></td>
         </tr>
 
     
@@ -11048,9 +11048,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result with the genesis block.
-    genesisBlock - the genesis block and its meta.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the result with the genesis block.
+genesisBlock - the genesis block and its meta.</p></td>
         </tr>
 
     
@@ -11131,7 +11131,7 @@ achieved consensus.</p>
 <div class="description">
     <p>Gets the genesis block from the ledger.</p>
 <p>callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -11265,7 +11265,7 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -11394,9 +11394,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the block.
-    eventBlock - the latest events block and meta.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the block.
+eventBlock - the latest events block and meta.</p></td>
         </tr>
 
     
@@ -11477,10 +11477,10 @@ achieved consensus.</p>
 <div class="description">
     <p>Gets the latest configuration event that has consensus.</p>
 <p>callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval.
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval.
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -11614,9 +11614,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the block.
-    eventBlock - the latest events block summary.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the block.
+eventBlock - the latest events block summary.</p></td>
         </tr>
 
     
@@ -11783,7 +11783,7 @@ achieved consensus.</p>
             
 
             <td class="description last"><p><code>false</code> to retrieve a summary for a non-consensus
-  block instead.</p></td>
+block instead.</p></td>
         </tr>
 
     
@@ -11838,8 +11838,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block summary for the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block summary for the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -12060,8 +12060,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block summary for the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block summary for the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -12145,7 +12145,7 @@ set of options.</p>
 <p>eventHash - the hash of the event to delete.
 options - a set of options used when deleting the event.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -12297,7 +12297,7 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -12381,8 +12381,8 @@ eventId, an array of patch instructions, and a set of options.</p>
 <p>eventHash - the ID of the event to update
 patch - a list of patch commands for the event
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the value of the updated event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the value of the updated event.</p>
 </div>
 
 
@@ -12553,7 +12553,7 @@ patch instructions, and a set of options.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -12635,7 +12635,7 @@ patch instructions, and a set of options.</p>
     <p>Validates an operation against the current configuration.</p>
 <p>operation - the operation to validate.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -12722,7 +12722,7 @@ callback(err) - the callback to call when finished.
     <p>Validates a ledgerConfiguration.</p>
 <p>ledgerConfiguration - the ledgerConfiguration to validate.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -12799,7 +12799,7 @@ callback(err) - the callback to call when finished.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bedrock-ledger-node_lib_ledger-node-records.js.html">bedrock-ledger-node/lib/ledger-node-records.js</a>, <a href="bedrock-ledger-node_lib_ledger-node-records.js.html#line14">line 14</a>
+        <a href="bedrock-ledger-node_lib_ledger-node-records.js.html">bedrock-ledger-node/lib/ledger-node-records.js</a>, <a href="bedrock-ledger-node_lib_ledger-node-records.js.html#line15">line 15</a>
     </li></ul></dd>
     
 
@@ -12941,12 +12941,12 @@ callback(err) - the callback to call when finished.
 options.</p>
 <p>event - the event to associate with a ledger.
 meta - the metadata that is associated with the event.
-  eventHash - the hash of the event data.
+eventHash - the hash of the event data.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the operation.
-    event - the event that was committed to storage.
-    meta - the metadata that was committed to storage.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the operation.
+event - the event that was committed to storage.
+meta - the metadata that was committed to storage.</p>
 </div>
 
 
@@ -13081,8 +13081,8 @@ block.</p>
             
 
             <td class="description last"><p>the block to create in the ledger.
-  blockHeight - the height of the block.
-  event - an array of events associated with the block.</p></td>
+blockHeight - the height of the block.
+event - an array of events associated with the block.</p></td>
         </tr>
 
     
@@ -13101,7 +13101,7 @@ block.</p>
             
 
             <td class="description last"><p>when true (default), a bedrock event is emitted to inform
- listeners that a block has been added.</p></td>
+listeners that a block has been added.</p></td>
         </tr>
 
     
@@ -13120,7 +13120,7 @@ block.</p>
             
 
             <td class="description last"><p>the metadata associated with the block.
-  blockHash - the hash value of the block.</p></td>
+blockHash - the hash value of the block.</p></td>
         </tr>
 
     
@@ -13139,10 +13139,10 @@ block.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the operation.
-    block - the block that was committed to storage.
-    meta - the metadata that was committed to storage.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the result of the operation.
+block - the block that was committed to storage.
+meta - the metadata that was committed to storage.</p></td>
         </tr>
 
     
@@ -13225,7 +13225,7 @@ block.</p>
 <p>operation - the operation to perform.
 options - a set of options used when adding the operation.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -13316,7 +13316,7 @@ and the state machine processes it.</p>
 [genesis] - boolean - is this genesis config
 [genesisBlock] - a genesis block for a ledger
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -13858,8 +13858,8 @@ callback(err) - the callback to call when finished.
 <div class="description">
     <p>Gets the current ledgerConfiguration for the ledger.</p>
 <p>callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  ledgerConfiguration - the latest ledgerConfiguration or <code>null</code> if none.</p>
+err - An Error if an error occurred, null otherwise.
+ledgerConfiguration - the latest ledgerConfiguration or <code>null</code> if none.</p>
 </div>
 
 
@@ -14057,8 +14057,8 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block with the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block with the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -14141,7 +14141,7 @@ callback(err) - the callback to call when finished.
 <p>[maxBlockHeight] - limit the record history to the specified block height.
 recordId - the URI of the object to fetch.
 callback(err, {meta, record}) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -14228,10 +14228,10 @@ callback(err, {meta, record}) - the callback to call when finished.
     <p>Gets an event in the ledger given a query and a set of options.</p>
 <p>eventHash - the hash of the event to fetch from storage.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -14320,8 +14320,8 @@ configuration block and latest consensus block, given a set of options.</p>
 <p>actor - the actor performing the action.
 options - a set of options used when retrieving the ledger metadata.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  ledgerMeta - metadata about the ledger.</p>
+err - An Error if an error occurred, null otherwise.
+ledgerMeta - metadata about the ledger.</p>
 </div>
 
 
@@ -14410,8 +14410,8 @@ of options.</p>
 <p>eventId - the event to fetch from the ledger.
 options - a set of options used when retrieving the event.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  event - the event that was retrieved from the database.</p>
+err - An Error if an error occurred, null otherwise.
+event - the event that was retrieved from the database.</p>
 </div>
 
 
@@ -14609,7 +14609,7 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -14693,10 +14693,10 @@ is active for blocks that are <em>subsequent</em> to the block that includes
 the ledger configuration event itself.</p>
 <p>blockHeight - the blockHeight used to locate the ledger configuration.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval.
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval.
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -14849,8 +14849,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>iterator) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  iterator - an iterator for all of the returned blocks.</p></td>
+err - An Error if an error occurred, null otherwise.
+iterator - an iterator for all of the returned blocks.</p></td>
         </tr>
 
     
@@ -14997,8 +14997,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block with the given block height that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block with the given block height that has consensus.</p></td>
         </tr>
 
     
@@ -15291,9 +15291,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result with the genesis block.
-    genesisBlock - the genesis block and its meta.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the result with the genesis block.
+genesisBlock - the genesis block and its meta.</p></td>
         </tr>
 
     
@@ -15374,7 +15374,7 @@ achieved consensus.</p>
 <div class="description">
     <p>Gets the genesis block from the ledger.</p>
 <p>callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -15508,7 +15508,7 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -15637,9 +15637,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the block.
-    eventBlock - the latest events block and meta.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the block.
+eventBlock - the latest events block and meta.</p></td>
         </tr>
 
     
@@ -15720,10 +15720,10 @@ achieved consensus.</p>
 <div class="description">
     <p>Gets the latest configuration event that has consensus.</p>
 <p>callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval.
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval.
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -15857,9 +15857,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the block.
-    eventBlock - the latest events block summary.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the block.
+eventBlock - the latest events block summary.</p></td>
         </tr>
 
     
@@ -16026,7 +16026,7 @@ achieved consensus.</p>
             
 
             <td class="description last"><p><code>false</code> to retrieve a summary for a non-consensus
-  block instead.</p></td>
+block instead.</p></td>
         </tr>
 
     
@@ -16081,8 +16081,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block summary for the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block summary for the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -16303,8 +16303,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block summary for the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block summary for the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -16388,7 +16388,7 @@ set of options.</p>
 <p>eventHash - the hash of the event to delete.
 options - a set of options used when deleting the event.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -16540,7 +16540,7 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -16624,8 +16624,8 @@ eventId, an array of patch instructions, and a set of options.</p>
 <p>eventHash - the ID of the event to update
 patch - a list of patch commands for the event
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the value of the updated event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the value of the updated event.</p>
 </div>
 
 
@@ -16796,7 +16796,7 @@ patch instructions, and a set of options.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -16878,7 +16878,7 @@ patch instructions, and a set of options.</p>
     <p>Validates an operation against the current configuration.</p>
 <p>operation - the operation to validate.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -16965,7 +16965,7 @@ callback(err) - the callback to call when finished.
     <p>Validates a ledgerConfiguration.</p>
 <p>ledgerConfiguration - the ledgerConfiguration to validate.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -17043,7 +17043,7 @@ with a particular ledger.</p></div>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bedrock-ledger-storage-mongodb_lib_LedgerEventStorage.js.html">bedrock-ledger-storage-mongodb/lib/LedgerEventStorage.js</a>, <a href="bedrock-ledger-storage-mongodb_lib_LedgerEventStorage.js.html#line24">line 24</a>
+        <a href="bedrock-ledger-storage-mongodb_lib_LedgerEventStorage.js.html">bedrock-ledger-storage-mongodb/lib/LedgerEventStorage.js</a>, <a href="bedrock-ledger-storage-mongodb_lib_LedgerEventStorage.js.html#line25">line 25</a>
     </li></ul></dd>
     
 
@@ -17185,12 +17185,12 @@ with a particular ledger.</p></div>
 options.</p>
 <p>event - the event to associate with a ledger.
 meta - the metadata that is associated with the event.
-  eventHash - the hash of the event data.
+eventHash - the hash of the event data.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the operation.
-    event - the event that was committed to storage.
-    meta - the metadata that was committed to storage.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the operation.
+event - the event that was committed to storage.
+meta - the metadata that was committed to storage.</p>
 </div>
 
 
@@ -17325,8 +17325,8 @@ block.</p>
             
 
             <td class="description last"><p>the block to create in the ledger.
-  blockHeight - the height of the block.
-  event - an array of events associated with the block.</p></td>
+blockHeight - the height of the block.
+event - an array of events associated with the block.</p></td>
         </tr>
 
     
@@ -17345,7 +17345,7 @@ block.</p>
             
 
             <td class="description last"><p>when true (default), a bedrock event is emitted to inform
- listeners that a block has been added.</p></td>
+listeners that a block has been added.</p></td>
         </tr>
 
     
@@ -17364,7 +17364,7 @@ block.</p>
             
 
             <td class="description last"><p>the metadata associated with the block.
-  blockHash - the hash value of the block.</p></td>
+blockHash - the hash value of the block.</p></td>
         </tr>
 
     
@@ -17383,10 +17383,10 @@ block.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the operation.
-    block - the block that was committed to storage.
-    meta - the metadata that was committed to storage.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the result of the operation.
+block - the block that was committed to storage.
+meta - the metadata that was committed to storage.</p></td>
         </tr>
 
     
@@ -17469,7 +17469,7 @@ block.</p>
 <p>operation - the operation to perform.
 options - a set of options used when adding the operation.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -17560,7 +17560,7 @@ and the state machine processes it.</p>
 [genesis] - boolean - is this genesis config
 [genesisBlock] - a genesis block for a ledger
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -18102,8 +18102,8 @@ callback(err) - the callback to call when finished.
 <div class="description">
     <p>Gets the current ledgerConfiguration for the ledger.</p>
 <p>callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  ledgerConfiguration - the latest ledgerConfiguration or <code>null</code> if none.</p>
+err - An Error if an error occurred, null otherwise.
+ledgerConfiguration - the latest ledgerConfiguration or <code>null</code> if none.</p>
 </div>
 
 
@@ -18301,8 +18301,8 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block with the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block with the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -18385,7 +18385,7 @@ callback(err) - the callback to call when finished.
 <p>[maxBlockHeight] - limit the record history to the specified block height.
 recordId - the URI of the object to fetch.
 callback(err, {meta, record}) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -18472,10 +18472,10 @@ callback(err, {meta, record}) - the callback to call when finished.
     <p>Gets an event in the ledger given a query and a set of options.</p>
 <p>eventHash - the hash of the event to fetch from storage.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -18564,8 +18564,8 @@ configuration block and latest consensus block, given a set of options.</p>
 <p>actor - the actor performing the action.
 options - a set of options used when retrieving the ledger metadata.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  ledgerMeta - metadata about the ledger.</p>
+err - An Error if an error occurred, null otherwise.
+ledgerMeta - metadata about the ledger.</p>
 </div>
 
 
@@ -18654,8 +18654,8 @@ of options.</p>
 <p>eventId - the event to fetch from the ledger.
 options - a set of options used when retrieving the event.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  event - the event that was retrieved from the database.</p>
+err - An Error if an error occurred, null otherwise.
+event - the event that was retrieved from the database.</p>
 </div>
 
 
@@ -18853,7 +18853,7 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -18937,10 +18937,10 @@ is active for blocks that are <em>subsequent</em> to the block that includes
 the ledger configuration event itself.</p>
 <p>blockHeight - the blockHeight used to locate the ledger configuration.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval.
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval.
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -19093,8 +19093,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>iterator) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  iterator - an iterator for all of the returned blocks.</p></td>
+err - An Error if an error occurred, null otherwise.
+iterator - an iterator for all of the returned blocks.</p></td>
         </tr>
 
     
@@ -19241,8 +19241,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block with the given block height that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block with the given block height that has consensus.</p></td>
         </tr>
 
     
@@ -19535,9 +19535,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result with the genesis block.
-    genesisBlock - the genesis block and its meta.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the result with the genesis block.
+genesisBlock - the genesis block and its meta.</p></td>
         </tr>
 
     
@@ -19618,7 +19618,7 @@ achieved consensus.</p>
 <div class="description">
     <p>Gets the genesis block from the ledger.</p>
 <p>callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -19752,7 +19752,7 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -19881,9 +19881,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the block.
-    eventBlock - the latest events block and meta.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the block.
+eventBlock - the latest events block and meta.</p></td>
         </tr>
 
     
@@ -19964,10 +19964,10 @@ achieved consensus.</p>
 <div class="description">
     <p>Gets the latest configuration event that has consensus.</p>
 <p>callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval.
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval.
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -20101,9 +20101,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the block.
-    eventBlock - the latest events block summary.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the block.
+eventBlock - the latest events block summary.</p></td>
         </tr>
 
     
@@ -20270,7 +20270,7 @@ achieved consensus.</p>
             
 
             <td class="description last"><p><code>false</code> to retrieve a summary for a non-consensus
-  block instead.</p></td>
+block instead.</p></td>
         </tr>
 
     
@@ -20325,8 +20325,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block summary for the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block summary for the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -20547,8 +20547,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block summary for the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block summary for the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -20632,7 +20632,7 @@ set of options.</p>
 <p>eventHash - the hash of the event to delete.
 options - a set of options used when deleting the event.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -20784,7 +20784,7 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -20868,8 +20868,8 @@ eventId, an array of patch instructions, and a set of options.</p>
 <p>eventHash - the ID of the event to update
 patch - a list of patch commands for the event
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the value of the updated event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the value of the updated event.</p>
 </div>
 
 
@@ -21040,7 +21040,7 @@ patch instructions, and a set of options.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -21122,7 +21122,7 @@ patch instructions, and a set of options.</p>
     <p>Validates an operation against the current configuration.</p>
 <p>operation - the operation to validate.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -21209,7 +21209,7 @@ callback(err) - the callback to call when finished.
     <p>Validates a ledgerConfiguration.</p>
 <p>ledgerConfiguration - the ledgerConfiguration to validate.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -21287,7 +21287,7 @@ a particular event.</p></div>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bedrock-ledger-storage-mongodb_lib_LedgerOperationStorage.js.html">bedrock-ledger-storage-mongodb/lib/LedgerOperationStorage.js</a>, <a href="bedrock-ledger-storage-mongodb_lib_LedgerOperationStorage.js.html#line19">line 19</a>
+        <a href="bedrock-ledger-storage-mongodb_lib_LedgerOperationStorage.js.html">bedrock-ledger-storage-mongodb/lib/LedgerOperationStorage.js</a>, <a href="bedrock-ledger-storage-mongodb_lib_LedgerOperationStorage.js.html#line20">line 20</a>
     </li></ul></dd>
     
 
@@ -21429,12 +21429,12 @@ a particular event.</p></div>
 options.</p>
 <p>event - the event to associate with a ledger.
 meta - the metadata that is associated with the event.
-  eventHash - the hash of the event data.
+eventHash - the hash of the event data.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the operation.
-    event - the event that was committed to storage.
-    meta - the metadata that was committed to storage.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the operation.
+event - the event that was committed to storage.
+meta - the metadata that was committed to storage.</p>
 </div>
 
 
@@ -21569,8 +21569,8 @@ block.</p>
             
 
             <td class="description last"><p>the block to create in the ledger.
-  blockHeight - the height of the block.
-  event - an array of events associated with the block.</p></td>
+blockHeight - the height of the block.
+event - an array of events associated with the block.</p></td>
         </tr>
 
     
@@ -21589,7 +21589,7 @@ block.</p>
             
 
             <td class="description last"><p>when true (default), a bedrock event is emitted to inform
- listeners that a block has been added.</p></td>
+listeners that a block has been added.</p></td>
         </tr>
 
     
@@ -21608,7 +21608,7 @@ block.</p>
             
 
             <td class="description last"><p>the metadata associated with the block.
-  blockHash - the hash value of the block.</p></td>
+blockHash - the hash value of the block.</p></td>
         </tr>
 
     
@@ -21627,10 +21627,10 @@ block.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the operation.
-    block - the block that was committed to storage.
-    meta - the metadata that was committed to storage.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the result of the operation.
+block - the block that was committed to storage.
+meta - the metadata that was committed to storage.</p></td>
         </tr>
 
     
@@ -21713,7 +21713,7 @@ block.</p>
 <p>operation - the operation to perform.
 options - a set of options used when adding the operation.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -21804,7 +21804,7 @@ and the state machine processes it.</p>
 [genesis] - boolean - is this genesis config
 [genesisBlock] - a genesis block for a ledger
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -22346,8 +22346,8 @@ callback(err) - the callback to call when finished.
 <div class="description">
     <p>Gets the current ledgerConfiguration for the ledger.</p>
 <p>callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  ledgerConfiguration - the latest ledgerConfiguration or <code>null</code> if none.</p>
+err - An Error if an error occurred, null otherwise.
+ledgerConfiguration - the latest ledgerConfiguration or <code>null</code> if none.</p>
 </div>
 
 
@@ -22545,8 +22545,8 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block with the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block with the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -22629,7 +22629,7 @@ callback(err) - the callback to call when finished.
 <p>[maxBlockHeight] - limit the record history to the specified block height.
 recordId - the URI of the object to fetch.
 callback(err, {meta, record}) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -22716,10 +22716,10 @@ callback(err, {meta, record}) - the callback to call when finished.
     <p>Gets an event in the ledger given a query and a set of options.</p>
 <p>eventHash - the hash of the event to fetch from storage.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -22808,8 +22808,8 @@ configuration block and latest consensus block, given a set of options.</p>
 <p>actor - the actor performing the action.
 options - a set of options used when retrieving the ledger metadata.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  ledgerMeta - metadata about the ledger.</p>
+err - An Error if an error occurred, null otherwise.
+ledgerMeta - metadata about the ledger.</p>
 </div>
 
 
@@ -22898,8 +22898,8 @@ of options.</p>
 <p>eventId - the event to fetch from the ledger.
 options - a set of options used when retrieving the event.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  event - the event that was retrieved from the database.</p>
+err - An Error if an error occurred, null otherwise.
+event - the event that was retrieved from the database.</p>
 </div>
 
 
@@ -23097,7 +23097,7 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -23181,10 +23181,10 @@ is active for blocks that are <em>subsequent</em> to the block that includes
 the ledger configuration event itself.</p>
 <p>blockHeight - the blockHeight used to locate the ledger configuration.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval.
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval.
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -23337,8 +23337,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>iterator) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  iterator - an iterator for all of the returned blocks.</p></td>
+err - An Error if an error occurred, null otherwise.
+iterator - an iterator for all of the returned blocks.</p></td>
         </tr>
 
     
@@ -23485,8 +23485,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block with the given block height that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block with the given block height that has consensus.</p></td>
         </tr>
 
     
@@ -23779,9 +23779,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result with the genesis block.
-    genesisBlock - the genesis block and its meta.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the result with the genesis block.
+genesisBlock - the genesis block and its meta.</p></td>
         </tr>
 
     
@@ -23862,7 +23862,7 @@ achieved consensus.</p>
 <div class="description">
     <p>Gets the genesis block from the ledger.</p>
 <p>callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -23996,7 +23996,7 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -24125,9 +24125,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the block.
-    eventBlock - the latest events block and meta.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the block.
+eventBlock - the latest events block and meta.</p></td>
         </tr>
 
     
@@ -24208,10 +24208,10 @@ achieved consensus.</p>
 <div class="description">
     <p>Gets the latest configuration event that has consensus.</p>
 <p>callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval.
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval.
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -24345,9 +24345,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the block.
-    eventBlock - the latest events block summary.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the block.
+eventBlock - the latest events block summary.</p></td>
         </tr>
 
     
@@ -24514,7 +24514,7 @@ achieved consensus.</p>
             
 
             <td class="description last"><p><code>false</code> to retrieve a summary for a non-consensus
-  block instead.</p></td>
+block instead.</p></td>
         </tr>
 
     
@@ -24569,8 +24569,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block summary for the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block summary for the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -24791,8 +24791,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block summary for the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block summary for the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -24876,7 +24876,7 @@ set of options.</p>
 <p>eventHash - the hash of the event to delete.
 options - a set of options used when deleting the event.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -25028,7 +25028,7 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -25112,8 +25112,8 @@ eventId, an array of patch instructions, and a set of options.</p>
 <p>eventHash - the ID of the event to update
 patch - a list of patch commands for the event
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the value of the updated event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the value of the updated event.</p>
 </div>
 
 
@@ -25284,7 +25284,7 @@ patch instructions, and a set of options.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -25366,7 +25366,7 @@ patch instructions, and a set of options.</p>
     <p>Validates an operation against the current configuration.</p>
 <p>operation - the operation to validate.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -25453,7 +25453,7 @@ callback(err) - the callback to call when finished.
     <p>Validates a ledgerConfiguration.</p>
 <p>ledgerConfiguration - the ledgerConfiguration to validate.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -25530,7 +25530,7 @@ callback(err) - the callback to call when finished.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bedrock-ledger-node_lib_ledger-node-operations.js.html">bedrock-ledger-node/lib/ledger-node-operations.js</a>, <a href="bedrock-ledger-node_lib_ledger-node-operations.js.html#line14">line 14</a>
+        <a href="bedrock-ledger-node_lib_ledger-node-operations.js.html">bedrock-ledger-node/lib/ledger-node-operations.js</a>, <a href="bedrock-ledger-node_lib_ledger-node-operations.js.html#line15">line 15</a>
     </li></ul></dd>
     
 
@@ -25672,12 +25672,12 @@ callback(err) - the callback to call when finished.
 options.</p>
 <p>event - the event to associate with a ledger.
 meta - the metadata that is associated with the event.
-  eventHash - the hash of the event data.
+eventHash - the hash of the event data.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the operation.
-    event - the event that was committed to storage.
-    meta - the metadata that was committed to storage.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the operation.
+event - the event that was committed to storage.
+meta - the metadata that was committed to storage.</p>
 </div>
 
 
@@ -25812,8 +25812,8 @@ block.</p>
             
 
             <td class="description last"><p>the block to create in the ledger.
-  blockHeight - the height of the block.
-  event - an array of events associated with the block.</p></td>
+blockHeight - the height of the block.
+event - an array of events associated with the block.</p></td>
         </tr>
 
     
@@ -25832,7 +25832,7 @@ block.</p>
             
 
             <td class="description last"><p>when true (default), a bedrock event is emitted to inform
- listeners that a block has been added.</p></td>
+listeners that a block has been added.</p></td>
         </tr>
 
     
@@ -25851,7 +25851,7 @@ block.</p>
             
 
             <td class="description last"><p>the metadata associated with the block.
-  blockHash - the hash value of the block.</p></td>
+blockHash - the hash value of the block.</p></td>
         </tr>
 
     
@@ -25870,10 +25870,10 @@ block.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the operation.
-    block - the block that was committed to storage.
-    meta - the metadata that was committed to storage.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the result of the operation.
+block - the block that was committed to storage.
+meta - the metadata that was committed to storage.</p></td>
         </tr>
 
     
@@ -25956,7 +25956,7 @@ block.</p>
 <p>operation - the operation to perform.
 options - a set of options used when adding the operation.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -26047,7 +26047,7 @@ and the state machine processes it.</p>
 [genesis] - boolean - is this genesis config
 [genesisBlock] - a genesis block for a ledger
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -26589,8 +26589,8 @@ callback(err) - the callback to call when finished.
 <div class="description">
     <p>Gets the current ledgerConfiguration for the ledger.</p>
 <p>callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  ledgerConfiguration - the latest ledgerConfiguration or <code>null</code> if none.</p>
+err - An Error if an error occurred, null otherwise.
+ledgerConfiguration - the latest ledgerConfiguration or <code>null</code> if none.</p>
 </div>
 
 
@@ -26788,8 +26788,8 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block with the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block with the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -26872,7 +26872,7 @@ callback(err) - the callback to call when finished.
 <p>[maxBlockHeight] - limit the record history to the specified block height.
 recordId - the URI of the object to fetch.
 callback(err, {meta, record}) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -26959,10 +26959,10 @@ callback(err, {meta, record}) - the callback to call when finished.
     <p>Gets an event in the ledger given a query and a set of options.</p>
 <p>eventHash - the hash of the event to fetch from storage.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -27051,8 +27051,8 @@ configuration block and latest consensus block, given a set of options.</p>
 <p>actor - the actor performing the action.
 options - a set of options used when retrieving the ledger metadata.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  ledgerMeta - metadata about the ledger.</p>
+err - An Error if an error occurred, null otherwise.
+ledgerMeta - metadata about the ledger.</p>
 </div>
 
 
@@ -27141,8 +27141,8 @@ of options.</p>
 <p>eventId - the event to fetch from the ledger.
 options - a set of options used when retrieving the event.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  event - the event that was retrieved from the database.</p>
+err - An Error if an error occurred, null otherwise.
+event - the event that was retrieved from the database.</p>
 </div>
 
 
@@ -27340,7 +27340,7 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -27424,10 +27424,10 @@ is active for blocks that are <em>subsequent</em> to the block that includes
 the ledger configuration event itself.</p>
 <p>blockHeight - the blockHeight used to locate the ledger configuration.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval.
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval.
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -27580,8 +27580,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>iterator) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  iterator - an iterator for all of the returned blocks.</p></td>
+err - An Error if an error occurred, null otherwise.
+iterator - an iterator for all of the returned blocks.</p></td>
         </tr>
 
     
@@ -27728,8 +27728,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block with the given block height that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block with the given block height that has consensus.</p></td>
         </tr>
 
     
@@ -28022,9 +28022,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result with the genesis block.
-    genesisBlock - the genesis block and its meta.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the result with the genesis block.
+genesisBlock - the genesis block and its meta.</p></td>
         </tr>
 
     
@@ -28105,7 +28105,7 @@ achieved consensus.</p>
 <div class="description">
     <p>Gets the genesis block from the ledger.</p>
 <p>callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -28239,7 +28239,7 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -28368,9 +28368,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the block.
-    eventBlock - the latest events block and meta.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the block.
+eventBlock - the latest events block and meta.</p></td>
         </tr>
 
     
@@ -28451,10 +28451,10 @@ achieved consensus.</p>
 <div class="description">
     <p>Gets the latest configuration event that has consensus.</p>
 <p>callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval.
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval.
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -28588,9 +28588,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the block.
-    eventBlock - the latest events block summary.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the block.
+eventBlock - the latest events block summary.</p></td>
         </tr>
 
     
@@ -28757,7 +28757,7 @@ achieved consensus.</p>
             
 
             <td class="description last"><p><code>false</code> to retrieve a summary for a non-consensus
-  block instead.</p></td>
+block instead.</p></td>
         </tr>
 
     
@@ -28812,8 +28812,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block summary for the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block summary for the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -29034,8 +29034,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block summary for the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block summary for the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -29119,7 +29119,7 @@ set of options.</p>
 <p>eventHash - the hash of the event to delete.
 options - a set of options used when deleting the event.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -29271,7 +29271,7 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -29355,8 +29355,8 @@ eventId, an array of patch instructions, and a set of options.</p>
 <p>eventHash - the ID of the event to update
 patch - a list of patch commands for the event
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the value of the updated event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the value of the updated event.</p>
 </div>
 
 
@@ -29527,7 +29527,7 @@ patch instructions, and a set of options.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -29609,7 +29609,7 @@ patch instructions, and a set of options.</p>
     <p>Validates an operation against the current configuration.</p>
 <p>operation - the operation to validate.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -29696,7 +29696,7 @@ callback(err) - the callback to call when finished.
     <p>Validates a ledgerConfiguration.</p>
 <p>ledgerConfiguration - the ledgerConfiguration to validate.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -29773,7 +29773,7 @@ callback(err) - the callback to call when finished.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bedrock-ledger-node_lib_ledger-node-meta.js.html">bedrock-ledger-node/lib/ledger-node-meta.js</a>, <a href="bedrock-ledger-node_lib_ledger-node-meta.js.html#line16">line 16</a>
+        <a href="bedrock-ledger-node_lib_ledger-node-meta.js.html">bedrock-ledger-node/lib/ledger-node-meta.js</a>, <a href="bedrock-ledger-node_lib_ledger-node-meta.js.html#line17">line 17</a>
     </li></ul></dd>
     
 
@@ -29915,12 +29915,12 @@ callback(err) - the callback to call when finished.
 options.</p>
 <p>event - the event to associate with a ledger.
 meta - the metadata that is associated with the event.
-  eventHash - the hash of the event data.
+eventHash - the hash of the event data.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the operation.
-    event - the event that was committed to storage.
-    meta - the metadata that was committed to storage.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the operation.
+event - the event that was committed to storage.
+meta - the metadata that was committed to storage.</p>
 </div>
 
 
@@ -30055,8 +30055,8 @@ block.</p>
             
 
             <td class="description last"><p>the block to create in the ledger.
-  blockHeight - the height of the block.
-  event - an array of events associated with the block.</p></td>
+blockHeight - the height of the block.
+event - an array of events associated with the block.</p></td>
         </tr>
 
     
@@ -30075,7 +30075,7 @@ block.</p>
             
 
             <td class="description last"><p>when true (default), a bedrock event is emitted to inform
- listeners that a block has been added.</p></td>
+listeners that a block has been added.</p></td>
         </tr>
 
     
@@ -30094,7 +30094,7 @@ block.</p>
             
 
             <td class="description last"><p>the metadata associated with the block.
-  blockHash - the hash value of the block.</p></td>
+blockHash - the hash value of the block.</p></td>
         </tr>
 
     
@@ -30113,10 +30113,10 @@ block.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the operation.
-    block - the block that was committed to storage.
-    meta - the metadata that was committed to storage.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the result of the operation.
+block - the block that was committed to storage.
+meta - the metadata that was committed to storage.</p></td>
         </tr>
 
     
@@ -30199,7 +30199,7 @@ block.</p>
 <p>operation - the operation to perform.
 options - a set of options used when adding the operation.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -30290,7 +30290,7 @@ and the state machine processes it.</p>
 [genesis] - boolean - is this genesis config
 [genesisBlock] - a genesis block for a ledger
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -30832,8 +30832,8 @@ callback(err) - the callback to call when finished.
 <div class="description">
     <p>Gets the current ledgerConfiguration for the ledger.</p>
 <p>callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  ledgerConfiguration - the latest ledgerConfiguration or <code>null</code> if none.</p>
+err - An Error if an error occurred, null otherwise.
+ledgerConfiguration - the latest ledgerConfiguration or <code>null</code> if none.</p>
 </div>
 
 
@@ -31031,8 +31031,8 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block with the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block with the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -31115,7 +31115,7 @@ callback(err) - the callback to call when finished.
 <p>[maxBlockHeight] - limit the record history to the specified block height.
 recordId - the URI of the object to fetch.
 callback(err, {meta, record}) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -31202,10 +31202,10 @@ callback(err, {meta, record}) - the callback to call when finished.
     <p>Gets an event in the ledger given a query and a set of options.</p>
 <p>eventHash - the hash of the event to fetch from storage.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -31294,8 +31294,8 @@ configuration block and latest consensus block, given a set of options.</p>
 <p>actor - the actor performing the action.
 options - a set of options used when retrieving the ledger metadata.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  ledgerMeta - metadata about the ledger.</p>
+err - An Error if an error occurred, null otherwise.
+ledgerMeta - metadata about the ledger.</p>
 </div>
 
 
@@ -31384,8 +31384,8 @@ of options.</p>
 <p>eventId - the event to fetch from the ledger.
 options - a set of options used when retrieving the event.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  event - the event that was retrieved from the database.</p>
+err - An Error if an error occurred, null otherwise.
+event - the event that was retrieved from the database.</p>
 </div>
 
 
@@ -31583,7 +31583,7 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -31667,10 +31667,10 @@ is active for blocks that are <em>subsequent</em> to the block that includes
 the ledger configuration event itself.</p>
 <p>blockHeight - the blockHeight used to locate the ledger configuration.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval.
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval.
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -31823,8 +31823,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>iterator) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  iterator - an iterator for all of the returned blocks.</p></td>
+err - An Error if an error occurred, null otherwise.
+iterator - an iterator for all of the returned blocks.</p></td>
         </tr>
 
     
@@ -31971,8 +31971,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block with the given block height that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block with the given block height that has consensus.</p></td>
         </tr>
 
     
@@ -32265,9 +32265,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result with the genesis block.
-    genesisBlock - the genesis block and its meta.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the result with the genesis block.
+genesisBlock - the genesis block and its meta.</p></td>
         </tr>
 
     
@@ -32348,7 +32348,7 @@ achieved consensus.</p>
 <div class="description">
     <p>Gets the genesis block from the ledger.</p>
 <p>callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -32482,7 +32482,7 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -32611,9 +32611,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the block.
-    eventBlock - the latest events block and meta.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the block.
+eventBlock - the latest events block and meta.</p></td>
         </tr>
 
     
@@ -32694,10 +32694,10 @@ achieved consensus.</p>
 <div class="description">
     <p>Gets the latest configuration event that has consensus.</p>
 <p>callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval.
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval.
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -32831,9 +32831,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the block.
-    eventBlock - the latest events block summary.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the block.
+eventBlock - the latest events block summary.</p></td>
         </tr>
 
     
@@ -33000,7 +33000,7 @@ achieved consensus.</p>
             
 
             <td class="description last"><p><code>false</code> to retrieve a summary for a non-consensus
-  block instead.</p></td>
+block instead.</p></td>
         </tr>
 
     
@@ -33055,8 +33055,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block summary for the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block summary for the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -33277,8 +33277,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block summary for the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block summary for the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -33362,7 +33362,7 @@ set of options.</p>
 <p>eventHash - the hash of the event to delete.
 options - a set of options used when deleting the event.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -33514,7 +33514,7 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -33598,8 +33598,8 @@ eventId, an array of patch instructions, and a set of options.</p>
 <p>eventHash - the ID of the event to update
 patch - a list of patch commands for the event
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the value of the updated event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the value of the updated event.</p>
 </div>
 
 
@@ -33770,7 +33770,7 @@ patch instructions, and a set of options.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -33852,7 +33852,7 @@ patch instructions, and a set of options.</p>
     <p>Validates an operation against the current configuration.</p>
 <p>operation - the operation to validate.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -33939,7 +33939,7 @@ callback(err) - the callback to call when finished.
     <p>Validates a ledgerConfiguration.</p>
 <p>ledgerConfiguration - the ledgerConfiguration to validate.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -34016,7 +34016,7 @@ callback(err) - the callback to call when finished.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bedrock-ledger-node_lib_ledger-node-events.js.html">bedrock-ledger-node/lib/ledger-node-events.js</a>, <a href="bedrock-ledger-node_lib_ledger-node-events.js.html#line11">line 11</a>
+        <a href="bedrock-ledger-node_lib_ledger-node-events.js.html">bedrock-ledger-node/lib/ledger-node-events.js</a>, <a href="bedrock-ledger-node_lib_ledger-node-events.js.html#line12">line 12</a>
     </li></ul></dd>
     
 
@@ -34158,12 +34158,12 @@ callback(err) - the callback to call when finished.
 options.</p>
 <p>event - the event to associate with a ledger.
 meta - the metadata that is associated with the event.
-  eventHash - the hash of the event data.
+eventHash - the hash of the event data.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the operation.
-    event - the event that was committed to storage.
-    meta - the metadata that was committed to storage.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the operation.
+event - the event that was committed to storage.
+meta - the metadata that was committed to storage.</p>
 </div>
 
 
@@ -34298,8 +34298,8 @@ block.</p>
             
 
             <td class="description last"><p>the block to create in the ledger.
-  blockHeight - the height of the block.
-  event - an array of events associated with the block.</p></td>
+blockHeight - the height of the block.
+event - an array of events associated with the block.</p></td>
         </tr>
 
     
@@ -34318,7 +34318,7 @@ block.</p>
             
 
             <td class="description last"><p>when true (default), a bedrock event is emitted to inform
- listeners that a block has been added.</p></td>
+listeners that a block has been added.</p></td>
         </tr>
 
     
@@ -34337,7 +34337,7 @@ block.</p>
             
 
             <td class="description last"><p>the metadata associated with the block.
-  blockHash - the hash value of the block.</p></td>
+blockHash - the hash value of the block.</p></td>
         </tr>
 
     
@@ -34356,10 +34356,10 @@ block.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the operation.
-    block - the block that was committed to storage.
-    meta - the metadata that was committed to storage.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the result of the operation.
+block - the block that was committed to storage.
+meta - the metadata that was committed to storage.</p></td>
         </tr>
 
     
@@ -34442,7 +34442,7 @@ block.</p>
 <p>operation - the operation to perform.
 options - a set of options used when adding the operation.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -34533,7 +34533,7 @@ and the state machine processes it.</p>
 [genesis] - boolean - is this genesis config
 [genesisBlock] - a genesis block for a ledger
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -35075,8 +35075,8 @@ callback(err) - the callback to call when finished.
 <div class="description">
     <p>Gets the current ledgerConfiguration for the ledger.</p>
 <p>callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  ledgerConfiguration - the latest ledgerConfiguration or <code>null</code> if none.</p>
+err - An Error if an error occurred, null otherwise.
+ledgerConfiguration - the latest ledgerConfiguration or <code>null</code> if none.</p>
 </div>
 
 
@@ -35274,8 +35274,8 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block with the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block with the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -35358,7 +35358,7 @@ callback(err) - the callback to call when finished.
 <p>[maxBlockHeight] - limit the record history to the specified block height.
 recordId - the URI of the object to fetch.
 callback(err, {meta, record}) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -35445,10 +35445,10 @@ callback(err, {meta, record}) - the callback to call when finished.
     <p>Gets an event in the ledger given a query and a set of options.</p>
 <p>eventHash - the hash of the event to fetch from storage.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -35537,8 +35537,8 @@ configuration block and latest consensus block, given a set of options.</p>
 <p>actor - the actor performing the action.
 options - a set of options used when retrieving the ledger metadata.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  ledgerMeta - metadata about the ledger.</p>
+err - An Error if an error occurred, null otherwise.
+ledgerMeta - metadata about the ledger.</p>
 </div>
 
 
@@ -35627,8 +35627,8 @@ of options.</p>
 <p>eventId - the event to fetch from the ledger.
 options - a set of options used when retrieving the event.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  event - the event that was retrieved from the database.</p>
+err - An Error if an error occurred, null otherwise.
+event - the event that was retrieved from the database.</p>
 </div>
 
 
@@ -35826,7 +35826,7 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -35910,10 +35910,10 @@ is active for blocks that are <em>subsequent</em> to the block that includes
 the ledger configuration event itself.</p>
 <p>blockHeight - the blockHeight used to locate the ledger configuration.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval.
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval.
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -36066,8 +36066,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>iterator) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  iterator - an iterator for all of the returned blocks.</p></td>
+err - An Error if an error occurred, null otherwise.
+iterator - an iterator for all of the returned blocks.</p></td>
         </tr>
 
     
@@ -36214,8 +36214,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block with the given block height that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block with the given block height that has consensus.</p></td>
         </tr>
 
     
@@ -36508,9 +36508,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result with the genesis block.
-    genesisBlock - the genesis block and its meta.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the result with the genesis block.
+genesisBlock - the genesis block and its meta.</p></td>
         </tr>
 
     
@@ -36591,7 +36591,7 @@ achieved consensus.</p>
 <div class="description">
     <p>Gets the genesis block from the ledger.</p>
 <p>callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -36725,7 +36725,7 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -36854,9 +36854,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the block.
-    eventBlock - the latest events block and meta.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the block.
+eventBlock - the latest events block and meta.</p></td>
         </tr>
 
     
@@ -36937,10 +36937,10 @@ achieved consensus.</p>
 <div class="description">
     <p>Gets the latest configuration event that has consensus.</p>
 <p>callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval.
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval.
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -37074,9 +37074,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the block.
-    eventBlock - the latest events block summary.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the block.
+eventBlock - the latest events block summary.</p></td>
         </tr>
 
     
@@ -37243,7 +37243,7 @@ achieved consensus.</p>
             
 
             <td class="description last"><p><code>false</code> to retrieve a summary for a non-consensus
-  block instead.</p></td>
+block instead.</p></td>
         </tr>
 
     
@@ -37298,8 +37298,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block summary for the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block summary for the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -37520,8 +37520,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block summary for the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block summary for the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -37605,7 +37605,7 @@ set of options.</p>
 <p>eventHash - the hash of the event to delete.
 options - a set of options used when deleting the event.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -37757,7 +37757,7 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -37841,8 +37841,8 @@ eventId, an array of patch instructions, and a set of options.</p>
 <p>eventHash - the ID of the event to update
 patch - a list of patch commands for the event
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the value of the updated event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the value of the updated event.</p>
 </div>
 
 
@@ -38013,7 +38013,7 @@ patch instructions, and a set of options.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -38095,7 +38095,7 @@ patch instructions, and a set of options.</p>
     <p>Validates an operation against the current configuration.</p>
 <p>operation - the operation to validate.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -38182,7 +38182,7 @@ callback(err) - the callback to call when finished.
     <p>Validates a ledgerConfiguration.</p>
 <p>ledgerConfiguration - the ledgerConfiguration to validate.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -38259,7 +38259,7 @@ callback(err) - the callback to call when finished.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="bedrock-ledger-node_lib_ledger-node-config.js.html">bedrock-ledger-node/lib/ledger-node-config.js</a>, <a href="bedrock-ledger-node_lib_ledger-node-config.js.html#line14">line 14</a>
+        <a href="bedrock-ledger-node_lib_ledger-node-config.js.html">bedrock-ledger-node/lib/ledger-node-config.js</a>, <a href="bedrock-ledger-node_lib_ledger-node-config.js.html#line15">line 15</a>
     </li></ul></dd>
     
 
@@ -38401,12 +38401,12 @@ callback(err) - the callback to call when finished.
 options.</p>
 <p>event - the event to associate with a ledger.
 meta - the metadata that is associated with the event.
-  eventHash - the hash of the event data.
+eventHash - the hash of the event data.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the operation.
-    event - the event that was committed to storage.
-    meta - the metadata that was committed to storage.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the operation.
+event - the event that was committed to storage.
+meta - the metadata that was committed to storage.</p>
 </div>
 
 
@@ -38541,8 +38541,8 @@ block.</p>
             
 
             <td class="description last"><p>the block to create in the ledger.
-  blockHeight - the height of the block.
-  event - an array of events associated with the block.</p></td>
+blockHeight - the height of the block.
+event - an array of events associated with the block.</p></td>
         </tr>
 
     
@@ -38561,7 +38561,7 @@ block.</p>
             
 
             <td class="description last"><p>when true (default), a bedrock event is emitted to inform
- listeners that a block has been added.</p></td>
+listeners that a block has been added.</p></td>
         </tr>
 
     
@@ -38580,7 +38580,7 @@ block.</p>
             
 
             <td class="description last"><p>the metadata associated with the block.
-  blockHash - the hash value of the block.</p></td>
+blockHash - the hash value of the block.</p></td>
         </tr>
 
     
@@ -38599,10 +38599,10 @@ block.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the operation.
-    block - the block that was committed to storage.
-    meta - the metadata that was committed to storage.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the result of the operation.
+block - the block that was committed to storage.
+meta - the metadata that was committed to storage.</p></td>
         </tr>
 
     
@@ -38685,7 +38685,7 @@ block.</p>
 <p>operation - the operation to perform.
 options - a set of options used when adding the operation.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -38776,7 +38776,7 @@ and the state machine processes it.</p>
 [genesis] - boolean - is this genesis config
 [genesisBlock] - a genesis block for a ledger
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -39318,8 +39318,8 @@ callback(err) - the callback to call when finished.
 <div class="description">
     <p>Gets the current ledgerConfiguration for the ledger.</p>
 <p>callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  ledgerConfiguration - the latest ledgerConfiguration or <code>null</code> if none.</p>
+err - An Error if an error occurred, null otherwise.
+ledgerConfiguration - the latest ledgerConfiguration or <code>null</code> if none.</p>
 </div>
 
 
@@ -39517,8 +39517,8 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block with the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block with the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -39601,7 +39601,7 @@ callback(err) - the callback to call when finished.
 <p>[maxBlockHeight] - limit the record history to the specified block height.
 recordId - the URI of the object to fetch.
 callback(err, {meta, record}) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -39688,10 +39688,10 @@ callback(err, {meta, record}) - the callback to call when finished.
     <p>Gets an event in the ledger given a query and a set of options.</p>
 <p>eventHash - the hash of the event to fetch from storage.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -39780,8 +39780,8 @@ configuration block and latest consensus block, given a set of options.</p>
 <p>actor - the actor performing the action.
 options - a set of options used when retrieving the ledger metadata.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  ledgerMeta - metadata about the ledger.</p>
+err - An Error if an error occurred, null otherwise.
+ledgerMeta - metadata about the ledger.</p>
 </div>
 
 
@@ -39870,8 +39870,8 @@ of options.</p>
 <p>eventId - the event to fetch from the ledger.
 options - a set of options used when retrieving the event.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  event - the event that was retrieved from the database.</p>
+err - An Error if an error occurred, null otherwise.
+event - the event that was retrieved from the database.</p>
 </div>
 
 
@@ -40069,7 +40069,7 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -40153,10 +40153,10 @@ is active for blocks that are <em>subsequent</em> to the block that includes
 the ledger configuration event itself.</p>
 <p>blockHeight - the blockHeight used to locate the ledger configuration.
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval.
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval.
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -40309,8 +40309,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>iterator) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  iterator - an iterator for all of the returned blocks.</p></td>
+err - An Error if an error occurred, null otherwise.
+iterator - an iterator for all of the returned blocks.</p></td>
         </tr>
 
     
@@ -40457,8 +40457,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block with the given block height that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block with the given block height that has consensus.</p></td>
         </tr>
 
     
@@ -40751,9 +40751,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result with the genesis block.
-    genesisBlock - the genesis block and its meta.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the result with the genesis block.
+genesisBlock - the genesis block and its meta.</p></td>
         </tr>
 
     
@@ -40834,7 +40834,7 @@ achieved consensus.</p>
 <div class="description">
     <p>Gets the genesis block from the ledger.</p>
 <p>callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -40968,7 +40968,7 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -41097,9 +41097,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the block.
-    eventBlock - the latest events block and meta.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the block.
+eventBlock - the latest events block and meta.</p></td>
         </tr>
 
     
@@ -41180,10 +41180,10 @@ achieved consensus.</p>
 <div class="description">
     <p>Gets the latest configuration event that has consensus.</p>
 <p>callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the result of the retrieval.
-    event - the event.
-    meta - metadata about the event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the result of the retrieval.
+event - the event.
+meta - metadata about the event.</p>
 </div>
 
 
@@ -41317,9 +41317,9 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the block.
-    eventBlock - the latest events block summary.</p></td>
+err - An Error if an error occurred, null otherwise.
+result - the block.
+eventBlock - the latest events block summary.</p></td>
         </tr>
 
     
@@ -41486,7 +41486,7 @@ achieved consensus.</p>
             
 
             <td class="description last"><p><code>false</code> to retrieve a summary for a non-consensus
-  block instead.</p></td>
+block instead.</p></td>
         </tr>
 
     
@@ -41541,8 +41541,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block summary for the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block summary for the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -41763,8 +41763,8 @@ achieved consensus.</p>
             
 
             <td class="description last"><p>block) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  block - the block summary for the given ID that has consensus.</p></td>
+err - An Error if an error occurred, null otherwise.
+block - the block summary for the given ID that has consensus.</p></td>
         </tr>
 
     
@@ -41848,7 +41848,7 @@ set of options.</p>
 <p>eventHash - the hash of the event to delete.
 options - a set of options used when deleting the event.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -42000,7 +42000,7 @@ callback(err) - the callback to call when finished.
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -42084,8 +42084,8 @@ eventId, an array of patch instructions, and a set of options.</p>
 <p>eventHash - the ID of the event to update
 patch - a list of patch commands for the event
 callback(err, result) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.
-  result - the value of the updated event.</p>
+err - An Error if an error occurred, null otherwise.
+result - the value of the updated event.</p>
 </div>
 
 
@@ -42256,7 +42256,7 @@ patch instructions, and a set of options.</p>
             
 
             <td class="description last"><p>the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p></td>
+err - An Error if an error occurred, null otherwise.</p></td>
         </tr>
 
     
@@ -42338,7 +42338,7 @@ patch instructions, and a set of options.</p>
     <p>Validates an operation against the current configuration.</p>
 <p>operation - the operation to validate.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -42425,7 +42425,7 @@ callback(err) - the callback to call when finished.
     <p>Validates a ledgerConfiguration.</p>
 <p>ledgerConfiguration - the ledgerConfiguration to validate.
 callback(err) - the callback to call when finished.
-  err - An Error if an error occurred, null otherwise.</p>
+err - An Error if an error occurred, null otherwise.</p>
 </div>
 
 
@@ -42470,7 +42470,7 @@ callback(err) - the callback to call when finished.
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu May 30 2019 18:43:32 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.2</a> on Fri May 31 2019 18:45:20 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

@@ -39,48 +39,60 @@
 </header>
 
 <article>
-    <h1>Bedrock Ledger Agent</h1><p><a href="https://ci.digitalbazaar.com/job/bedrock-ledger-agent"><img src="https://ci.digitalbazaar.com/buildStatus/icon?job=bedrock-ledger-agent" alt="Build Status"></a></p>
+    <h1>Bedrock Ledger Agent</h1>
+<p><a href="https://ci.digitalbazaar.com/job/bedrock-ledger-agent"><img src="https://ci.digitalbazaar.com/buildStatus/icon?job=bedrock-ledger-agent" alt="Build Status"></a></p>
 <p>A <a href="https://github.com/digitalbazaar/bedrock">bedrock</a> module for the creation and management of
 <a href="https://w3c.github.io/web-ledger/">Web Ledger Agents</a>.
 The Web Ledger ecosystem consists of Ledger Agents,
 Ledger Nodes, Ledgers, Blocks, and Events.</p>
 <p><img src="https://w3c.github.io/web-ledger/diagrams/ecosystem.svg" alt="An image of the Web Ledger ecosystem"></p>
-<h2>The HTTP API</h2><ul>
-<li>GET /ledger-agents<ul>
+<h2>The HTTP API</h2>
+<ul>
+<li>GET /ledger-agents
+<ul>
 <li>Get a list of all ledger agents</li>
 </ul>
 </li>
-<li>POST /ledger-agents?owner={OWNER_ID}<ul>
+<li>POST /ledger-agents?owner={OWNER_ID}
+<ul>
 <li>Create a new ledger agent</li>
 </ul>
 </li>
-<li>GET /ledger-agent/{AGENT_ID}<ul>
+<li>GET /ledger-agent/{AGENT_ID}
+<ul>
 <li>Get status information on a particular ledger agent</li>
 </ul>
 </li>
-<li>POST /ledger-agent/{AGENT_ID}/config<ul>
+<li>POST /ledger-agent/{AGENT_ID}/config
+<ul>
 <li>Add a new configuration</li>
 </ul>
 </li>
-<li>POST /ledger-agent/{AGENT_ID}/operations<ul>
+<li>POST /ledger-agent/{AGENT_ID}/operations
+<ul>
 <li>Add a new operation</li>
 </ul>
 </li>
-<li>GET /ledger-agent/{AGENT_ID}/events?id=EVENT_ID<ul>
+<li>GET /ledger-agent/{AGENT_ID}/events?id=EVENT_ID
+<ul>
 <li>Get an existing event</li>
 </ul>
 </li>
-<li>GET /ledger-agent/{AGENT_ID}/blocks?id=BLOCK_ID<ul>
+<li>GET /ledger-agent/{AGENT_ID}/blocks?id=BLOCK_ID
+<ul>
 <li>Get an existing block</li>
 </ul>
 </li>
-<li>GET /ledger-agent/{AGENT_ID}/query<ul>
+<li>GET /ledger-agent/{AGENT_ID}/query
+<ul>
 <li>Query the current state of an object in the system</li>
 </ul>
 </li>
 </ul>
-<h2>The Ledger Agent API</h2><ul>
-<li>Ledger Agent API<ul>
+<h2>The Ledger Agent API</h2>
+<ul>
+<li>Ledger Agent API
+<ul>
 <li>api.add(actor, ledgerNodeId, options, (err, ledgerAgent))</li>
 <li>api.get(actor, agentId, options, (err, ledgerAgent))</li>
 <li>api.remove(actor, agentId, options, callback(err))</li>
@@ -88,7 +100,10 @@ Ledger Nodes, Ledgers, Blocks, and Events.</p>
 </ul>
 </li>
 </ul>
-<h2>Quick Examples</h2><pre class="prettyprint source"><code>npm install bedrock-ledger-agent</code></pre><pre class="prettyprint source lang-js"><code>const agent = require('bedrock-ledger-agent');
+<h2>Quick Examples</h2>
+<pre class="prettyprint source"><code>npm install bedrock-ledger-agent
+</code></pre>
+<pre class="prettyprint source lang-js"><code>const agent = require('bedrock-ledger-agent');
 const actor = 'admin';
 const agentId = 'https://example.com/ledger-agents/eb8c22dc';
 const options = {};
@@ -97,8 +112,13 @@ agent.get(actor, agentId, options, (err, ledgerAgent) => {
   ledgerAgent.node.events.add( /* new ledger event details go here */);
     /* ... do other operations on the ledger */
   });
-});</code></pre><h2>Configuration</h2><p>For documentation on configuration, see <a href="./lib/config.js">config.js</a>.</p>
-<h2>Ledger Agent API</h2><h3>Add a Ledger Agent</h3><p>Create a new ledger agent given a set of options. If a ledgerNodeId is
+});
+</code></pre>
+<h2>Configuration</h2>
+<p>For documentation on configuration, see <a href="./lib/config.js">config.js</a>.</p>
+<h2>Ledger Agent API</h2>
+<h3>Add a Ledger Agent</h3>
+<p>Create a new ledger agent given a set of options. If a ledgerNodeId is
 provided, a new ledger agent will be created to connect to an
 existing ledger. If a <code>ledgerConfiguration</code> is specified in the options,
 a new ledger and corresponding ledger node will be created, ignoring
@@ -106,15 +126,17 @@ any specified ledgerNodeId.</p>
 <ul>
 <li>actor - the actor performing the action.</li>
 <li>ledgerNodeId - the ID for the ledger node to connect to.</li>
-<li>options - a set of options used when creating the agent.<ul>
+<li>options - a set of options used when creating the agent.
+<ul>
 <li>ledgerConfiguration - the configuration for the ledger.</li>
 <li>genesis - if true, create an entirely new genesis ledger (default: false).</li>
 <li>storage - the storage subsystem for the ledger (default: 'mongodb').</li>
 <li>public - if false, only the actor should be able to access the
-  created ledger, if true, anyone can access (default: false).</li>
+created ledger, if true, anyone can access (default: false).</li>
 </ul>
 </li>
-<li>callback(err, ledger) - the callback to call when finished.<ul>
+<li>callback(err, ledger) - the callback to call when finished.
+<ul>
 <li>err - An Error if an error occurred, null otherwise</li>
 <li>ledgerAgent - the ledger agent associated with the agent.</li>
 </ul>
@@ -166,12 +188,16 @@ agent.add(actor, null, options, (err, ledgerAgent) => {
   }
 
   console.log('Ledger agent created:', ledgerAgent.id);
-});</code></pre><h3>Get a Specific Ledger Agent</h3><p>Gets a ledger agent given an agentId and a set of options.</p>
+});
+</code></pre>
+<h3>Get a Specific Ledger Agent</h3>
+<p>Gets a ledger agent given an agentId and a set of options.</p>
 <ul>
 <li>actor - the actor performing the action.</li>
 <li>agentId - the URI of the agent.</li>
 <li>options - a set of options used when creating the agent.</li>
-<li>callback(err, ledgerAgent) - the callback to call when finished.<ul>
+<li>callback(err, ledgerAgent) - the callback to call when finished.
+<ul>
 <li>err - An Error if an error occurred, null otherwise</li>
 <li>ledgerAgent - A ledger agent that can be used to
 instruct the ledger node to perform certain actions.</li>
@@ -188,12 +214,16 @@ agent.get(actor, agentId, options, (err, ledgerAgent) => {
   }
 
   console.log('Ledger agent retrieved', ledgerAgent.id);
-});</code></pre><h3>Remove a Ledger Agent</h3><p>Remove an existing ledger agent given an agentId and a set of options.</p>
+});
+</code></pre>
+<h3>Remove a Ledger Agent</h3>
+<p>Remove an existing ledger agent given an agentId and a set of options.</p>
 <ul>
 <li>actor - the actor performing the action.</li>
 <li>agentId - the URI of the agent.</li>
 <li>options - a set of options used when removing the agent.</li>
-<li>callback(err) - the callback to call when finished.<ul>
+<li>callback(err) - the callback to call when finished.
+<ul>
 <li>err - An Error if an error occurred, null otherwise</li>
 </ul>
 </li>
@@ -207,13 +237,17 @@ agent.remove(actor, agentId, options, err => {
   }
 
   console.log('Ledger agent removed.');
-});</code></pre><h3>Iterate Through All Ledger Agents</h3><p>Gets an iterator that will iterate over all ledger agents in
+});
+</code></pre>
+<h3>Iterate Through All Ledger Agents</h3>
+<p>Gets an iterator that will iterate over all ledger agents in
 the system. The iterator will return a ledger agent which
 can be used to operate on the corresponding ledger node.</p>
 <ul>
 <li>actor - the actor performing the action.</li>
 <li>options - a set of options to use when retrieving the list.</li>
-<li>callback(err, iterator) - the callback to call when finished.<ul>
+<li>callback(err, iterator) - the callback to call when finished.
+<ul>
 <li>err - An Error if an error occurred, null otherwise</li>
 <li>iterator - An iterator that returns a list of ledger agents.</li>
 </ul>
@@ -230,7 +264,8 @@ bedrockagent.getagentIterator(actor, options, (err, iterator) => {
   for(const ledgerAgent of iterator) {
     console.log('Ledger agent:',  ledgerAgent.id);
   }
-});</code></pre>
+});
+</code></pre>
 </article>
 
 </section>
@@ -240,7 +275,7 @@ bedrockagent.getagentIterator(actor, options, (err, iterator) => {
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu May 30 2019 18:43:32 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.2</a> on Fri May 31 2019 18:45:20 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
